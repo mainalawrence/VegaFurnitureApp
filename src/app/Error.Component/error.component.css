@@ -1,0 +1,15 @@
+div{
+    background-color: white;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    padding: 15% 0;
+    flex-direction: column;
+}
+h1{
+    margin-top: -2%;
+    margin: 0 0 2% 0;
+}
