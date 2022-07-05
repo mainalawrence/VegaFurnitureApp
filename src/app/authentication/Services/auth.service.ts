@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   logoutUser() {
-    localStorage.clear();
+    localStorage.removeItem('bright-tech-token');
     this.router.navigate(["/auth/login"])
   }
   

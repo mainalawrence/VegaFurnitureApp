@@ -1,0 +1,34 @@
+.product-bg{
+    background-color:#ffffff;
+}
+
+.c-card{
+    margin: 1%;
+    color:#1a1a1a;
+    border-width: 1px;   
+    border-color: rgba(139, 135, 135, 0.2);
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgba(140, 136, 136, 0.093);
+}
+
+.c-card:hover{
+    color: #ffffff;
+    background-color: #32cf9d;
+}
+.body {
+    padding: 1%;
+    background-color: #ffffff;
+    
+}
+.body:hover{
+    background-color:rgb(174, 220, 205); 
+}
+
+
+.footer {
+    padding: 1%;
+    background-color: rgba(158, 5, 5, 0.2);
+
+}
+
