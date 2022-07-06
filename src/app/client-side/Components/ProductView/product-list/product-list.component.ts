@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products:any[]=[1,2,4]
+  products:any[]=[1,2,,2,3,4,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,4]
   constructor() { }
 
   ngOnInit(): void {

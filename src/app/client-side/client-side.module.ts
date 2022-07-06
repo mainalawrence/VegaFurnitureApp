@@ -6,7 +6,7 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ProductComponent } from './Components/ProductView/product/product.component';
 import { ProductFilterComponent } from './Components/product-filter/product-filter.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -15,16 +15,19 @@ import { ProductFilterComponent } from './Components/product-filter/product-filt
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    ProductFilterComponent
+    ProductFilterComponent,
+    
   ],
   imports: [
     CommonModule,
+    NgbModule,
     RouterModule.forChild([
       {path:'',children:[
         {path:'',component:ProductListComponent}
       ]}
     ])
 
-  ]
+  ],
+  bootstrap:[ProductFilterComponent]
 })
 export class ClientSideModule { }

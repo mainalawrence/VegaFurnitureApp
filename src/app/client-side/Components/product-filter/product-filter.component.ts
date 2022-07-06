@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-filter.component.css']
 })
 export class ProductFilterComponent implements OnInit {
-
+    RatingCollapsed=true
+    CategoryCollapsed=true
+    PriceCollapsed=true
   constructor() { }
 
   ngOnInit(): void {
