@@ -1,5 +1,6 @@
 a:hover{
     color:rgba(0, 0, 0, 0.62) !important;
+    
 }
 a{
 color: white !important;
@@ -10,6 +11,11 @@ color: white !important;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+.images{
+    width: 10%;
+    
 }
 
 @media (min-width: 768px) {

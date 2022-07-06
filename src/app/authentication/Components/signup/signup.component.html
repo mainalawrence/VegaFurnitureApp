@@ -1,1 +1,47 @@
-<p>signup works!</p>
+<div class="container">
+    <div class="center">
+        <div class="card">
+            <h2 class="header zoom">signUp</h2>
+            <div class="">
+                <form [formGroup]="signinForm" class="form">
+                    <div class="form-group">
+                        <input id="name" type="text" formControlName="name" class="form-controllers zoom"
+                            placeholder="Enter Name" />
+                        <div *ngIf="signinForm.get('name')?.invalid && signinForm.get('name')?.touched"
+                            class="alert alert-danger form-controllers">
+                            Invalid Name
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input id="email" type="email" formControlName="email" class="form-controllers zoom"
+                            placeholder="Enter Email" />
+                        <div *ngIf="signinForm.get('email')?.invalid && signinForm.get('email')?.touched"
+                            class="alert alert-danger form-controllers">
+                            Invalid Email
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input id="password" type="password" formControlName="password" class="form-controllers zoom"
+                            placeholder="Enter password" />
+                        <div *ngIf="signinForm.get('password')?.invalid && signinForm.get('password')?.touched"
+                            class="alert alert-danger form-controllers">
+                            Invalid Password
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button (click)="onSubmit()" class="btn zoom">Login</button>
+                    </div>
+                </form>
+                <div class="googlfb">
+                    <button class="btn zoom btn-google "><img class="google" src="../../../assets/loginGoogle.svg"
+                            alt="">Sign in With Google</button>
+                    <button class="btn zoom btn-fb"><img class="facebook" src="../../../assets/LoginFb.svg" alt="">Sign
+                        in With Facebook</button>
+                </div>
+                <a class="zoom" routerLink="/auth/login">login?</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>

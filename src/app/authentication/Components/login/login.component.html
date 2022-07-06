@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="container">
+    <div class="center">
+        <div class="card">
+            <h2 class="header zoom">Login</h2>
+            <div class="">
+                <form [formGroup]="loginForm" class="form ">
+                    <div class="form-group">
+                        <input id="email" type="email" formControlName="email" class="form-controllers zoom"
+                            placeholder="Enter Email" />
+                        <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+                            class="alert alert-danger">
+                            Invalid Email
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input id="password" type="password" formControlName="password" class="form-controllers zoom"
+                            placeholder="Enter password" />
+                        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                            class="alert alert-danger">
+                            Invalid Password
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button routerLink="/" (click)="loggin()" class="btn zoom">Login</button>
+                    </div>
+                </form>
+                <div class="googlfb">
+                    <button class="btn zoom btn-google "><img class="google" src="../../../assets/loginGoogle.svg"
+                            alt="">Sign in With Google</button>
+                    <button class="btn zoom btn-fb"><img class="facebook" src="../../../assets/LoginFb.svg" alt="">Sign
+                        in With Facebook</button>
+                </div>
+                <a class="zoom" routerLink="/auth/signup">create Account?</a>
+            </div>
+
+        </div>
+    </div>
+</div>
