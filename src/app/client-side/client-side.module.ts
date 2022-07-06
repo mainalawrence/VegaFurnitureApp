@@ -28,6 +28,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ])
 
   ],
-  bootstrap:[ProductFilterComponent]
+  bootstrap:[ProductFilterComponent,FooterComponent]
 })
 export class ClientSideModule { }

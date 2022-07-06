@@ -12,6 +12,7 @@ export class ProductFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
