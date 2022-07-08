@@ -1,0 +1,50 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 15%);
+    grid-auto-rows: 30%;
+    gap: 0.3%;
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+    margin-bottom: 1%;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/*phone*/
+@media only screen and (max-width: 375px) {
+    .grid {
+        display: grid;
+        grid-template-columns:repeat(2, 45%);
+        grid-auto-rows: auto;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*tablet*/
+@media only screen and (min-width: 600px) and (max-width: 810px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 25%);
+        grid-auto-rows: 30%;
+        gap: 1%;
+        background-color: white;
+        border-radius: 10px;
+        justify-content: center;
+    }
+}

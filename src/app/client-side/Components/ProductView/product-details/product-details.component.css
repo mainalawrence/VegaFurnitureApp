@@ -1,0 +1,10 @@
+img{
+   width: 10%;
+}
+
+.add-cart:hover{
+background-color: #32cf9d;
+color: white;
+outline: none;
+border-width: 0px;
+}
