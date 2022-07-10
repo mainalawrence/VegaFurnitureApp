@@ -9,11 +9,14 @@ import { ProductFilterComponent } from '../product-filter/product-filter.compone
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-navbarCollapse=true;
+  public navbarCollapse=true;
+  public searchBarOpen!:boolean;
+
    constructor(private offcanvasService: NgbOffcanvas,public router:Router) {}
 
 
   ngOnInit(): void {
+    this.searchBarOpen=false
   }
   open(){
 const offcanvasRef = this.offcanvasService.open(ProductFilterComponent);

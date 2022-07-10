@@ -1,41 +1,51 @@
-<div style="background-color:#32cf9d;" class="container-fluid p-4 sticky-top navbar sticky-top navbar-dark">
-        <div class="left ">
-            <img routerLink="/products" class="zoom" src="../../../assets/brand.svg" alt="filter" />
-            <button class="navbar-toggler position-absolute d-md-none collapsed btn-danger" type="button" data-bs-toggle="collapse"
-                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">this</span>
+
+
+    <nav style="background-color:#32cf9d;" class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container-fluid p-l-1">
+        <img routerLink="/products" class="zoom brand" src="../../../assets/brand.svg" alt="filter" />
+
+        <div class="">
+            <button (click)="Category.toggle()" style="outline: none !important;outline-width: 0px !important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
-        <span class="sidebar-toggle d-flex mr-2 "> <i class="hamburger align-self-center"></i></span>
+            <span class="sidebar-toggle d-flex mr-2 "> <i class="hamburger align-self-center"></i></span>
         </div>
 
-        <div #Category="ngbCollapse" [(ngbCollapse)]="navbarCollapse" class="collapse navbar-collapse " id="navbarSupportedContent">
-            <div class="center">
+      <div class="container-fluid d-flex">
+            <div #Category="ngbCollapse" [(ngbCollapse)]="navbarCollapse"
+                class="collapse navbar-collapse " id="navbarSupportedContent">
             
-                <div class="filter-container"><img ngbPopover="filter Products" triggers="mouseenter:mouseleave" (click)="open()"
-                        class="zoom" src="../../../assets/filter.svg" alt="filter" /></div>
-                <div class="form">
-                    <form #search="ngForm">
-                        <input type="text" placeholder="  search.." ngModel name="search">
-                        <button class="btn zoom" type="submit" [disabled]="!search.form.valid">
-                            Search
-                        </button>
-                    </form>
+                <div class="row  container-fluid  justify-content-center align-items-center">
+                    <div class="  ">
+                        <img ngbPopover="filter Products" triggers="mouseenter:mouseleave" (click)="open()"
+                                    class="zoom " src="../../../assets/filter.svg" alt="filter" />
+                        <img ngbPopover="signin /signup" triggers="mouseenter:mouseleave" routerLink="/auth/login" class="zoom"
+                            src="../../../assets/avata.svg" alt="filter" />
+                        <img ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart" class="zoom"
+                            src="../../../assets/cart.svg" alt="filter" />
+                            <img ngbPopover="Search" triggers="mouseenter:mouseleave" (click)="this.searchBarOpen=!searchBarOpen" class="zoom" src="../../../assets/cart.svg"
+                                alt="filter" />
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
+                            data-bs-content="Disabled popover">
+                            <button popoverTitle="Pop title" routerLink="/products" class="btn zoom">Logout</button>
+                        </span>
+                    </div>
+                        <div hidden="searchBarOpen" class="form center col-sm">
+                            <form #search="ngForm">
+                                <input type="text" placeholder="  search.." ngModel name="search">
+                                <button class="btn zoom" type="submit" [disabled]="!search.form.valid">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
                 </div>
             </div>
-            <div class="right">
-                <img ngbPopover="signin /signup" triggers="mouseenter:mouseleave" routerLink="/auth/login" class="zoom"
-                    src="../../../assets/avata.svg" alt="filter" />
-                <img ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart" class="zoom"
-                    src="../../../assets/cart.svg" alt="filter" />
-                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
-                    data-bs-content="Disabled popover">
-                    <button popoverTitle="Pop title" routerLink="/products" class="btn zoom">Logout</button>
-                </span>
-            </div>
-        </div>
+      </div>
+    </div>
+        </nav>
 
-</div>
+
 
     
 
@@ -43,50 +53,3 @@
 
 
 
-<!--  -->
-<!-- <nav class="navbar navbar-expand-lg navbar-dark  ">
-    <a class="navbar-brand text-light " routerLink="">Navbar</a>
-    <button (click)="Category.toggle()" style="outline: none !important;outline-width: 0px !important;"
-        class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div #Category="ngbCollapse" [(ngbCollapse)]="navbarCollapse" class="collapse navbar-collapse "
-        id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto d-flex">
-            <li class="nav-item "><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item "><a class="nav-link" href="#">shop</a></li>
-            <li class="nav-item "><a class="nav-link" href="#">Decolation</a></li>
-            <li class="nav-item "><a class="nav-link" href="#">About us</a></li>
-            <li class="nav-item "><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item ">
-                <a routerLink="/auth/login" class="">
-                    login
-                </a>
-            </li>
-
-            <li class="nav-item ">
-                cart
-            </li>
-
-
-            <li class="nav-item ">
-                <a routerLink="/pages/wishlist" class="">
-                    heart
-                </a>
-            </li>
-
-            <li class="nav-item ">
-                <a href="/search" class="w-lg-10 w-sm-30 navbar-dark">
-                    search
-                </a>
-            </li>
-
-        </ul>
-        <form #searchForm class="d-flex flex-row my-2 my-lg-0">
-            <input #search ngnodule class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav> -->
