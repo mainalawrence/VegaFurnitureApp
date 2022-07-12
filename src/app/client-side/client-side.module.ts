@@ -28,12 +28,12 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forChild([
       {path:'',children:[
         {path:'',component:ProductListComponent},
-        {path:'details',component:ProductDetailsComponent}
+        {path:':id',component:ProductDetailsComponent}
 
       ]}
     ])
 
   ],
-  bootstrap:[ProductFilterComponent,FooterComponent]
+  bootstrap:[ProductFilterComponent,FooterComponent,HeaderComponent]
 })
 export class ClientSideModule { }

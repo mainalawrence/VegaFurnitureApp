@@ -4,7 +4,7 @@
   
     display: flex;
     align-items: center;
-    padding: 1%;
+   
     margin: auto;
     border-radius: 5px;
     margin-bottom: 1%;
@@ -95,12 +95,25 @@ img{
     visibility: hidden !important;
 } */
 
+
+
+svg{
+    color: white;
+    margin-right: 1%;
+    width: 7%;
+}
+
 /*phone*/
 @media only screen and (max-width: 428px) {
 
     .fluid-sm{
-width: 100% !important;
+        width: 100% !important;
     }
+        svg {
+            width: 10%;
+            margin-right: 6%;
+            
+        }
     /* .container-fluid{
     display: flex;
     flex-direction: column;
