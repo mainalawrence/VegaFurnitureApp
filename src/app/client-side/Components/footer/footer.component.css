@@ -1,0 +1,23 @@
+.mt{
+    margin-top: 10%;
+}
+svg{
+    margin-right: 10% !important;
+}
+button:hover{
+background-color: #32cf9d;
+outline: none;
+}
+a{
+    color: rgb(51, 51, 51);
+}
+a:hover{
+    color: #32cf9d;
+}
+@media only screen and (max-width: 428px) {
+
+    .mt {
+            margin-top: 80%;
+        }
+        
+}
