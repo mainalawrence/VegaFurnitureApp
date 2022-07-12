@@ -1,10 +1,27 @@
-img{
-   width: 10%;
-}
+
 
 .add-cart:hover{
 background-color: #32cf9d;
 color: white;
 outline: none;
 border-width: 0px;
+}
+.card{
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img-thumbnail{
+   width: 30%;
+}
+.main-image{
+   width: 90%;
+   display:flex;
+   justify-content: center;
+}
+.main-image>img {
+   width: 80%;
+   height: 50%;
+}
+.grouping{
+   display: flex;
 }
