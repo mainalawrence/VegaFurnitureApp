@@ -9,6 +9,8 @@ import { ProductFilterComponent } from './Components/product-filter/product-filt
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './Components/ProductView/product-details/product-details.component';
 import { FormsModule } from '@angular/forms';
+import { CategoryComponent } from './Components/category/category.component';
+import { CategoryListComponent } from './Components/category-list/category-list.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     ProductFilterComponent,
     ProductDetailsComponent,
+    CategoryComponent,
+    CategoryListComponent,
     
   ],
   imports: [
@@ -28,7 +32,9 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forChild([
       {path:'',children:[
         {path:'',component:ProductListComponent},
+        {path:'category',component:CategoryListComponent},
         {path:':id',component:ProductDetailsComponent}
+      
 
       ]}
     ])
