@@ -19,7 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10% !important;
+    width: 8% !important;
+    margin-left: 2%;
 }
 
 .left>img {
@@ -107,6 +108,9 @@ svg{
         svg {
             width: 10%;
             margin-right: 6%;
+            
+        }
+        .brand{
             
         }
     /* .container-fluid{

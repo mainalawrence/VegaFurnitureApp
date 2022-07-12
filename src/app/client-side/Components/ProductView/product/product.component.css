@@ -1,7 +1,39 @@
 .product-bg{
     background-color:#ffffff;
 }
+.left-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.top-right {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    height:80%;
+    width: 20%;
+   
+}
+.svg-container{
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.svg-container:hover{
+    background-color: #32cf9d;
+}
+svg{
+    color: #32cf9d;
+}
+svg:hover{
+    color:white;
 
+}
 .c-card{
     margin: 1%;
     color:#1a1a1a;
