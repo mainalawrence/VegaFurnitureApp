@@ -1,47 +1,52 @@
 export const navbarData = [
     {
         routeLink: 'dashboard',
-        icon: 'fal fa-home',
+        icon: 'bi bi-speedometer2',
         label: 'Dashboard'
     },
     {
+        routeLink: 'orders',
+        icon: 'bi bi-cart',
+        label: 'Orders'
+    },
+    {
         routeLink: 'products',
-        icon: 'fal fa-box-open',
+        icon: 'bi bi-card-checklist',
         label: 'Products'
     },
     {
         routeLink: 'statistics',
-        icon: 'fal fa-chart-bar',
+        icon: 'bi bi-bar-chart-fill',
         label: 'Statistics'
     },
     {
-        routeLink: 'coupens',
-        icon: 'fal fa-tags',
-        label: 'Coupens'
-    },
-    {
-        routeLink: 'pages',
-        icon: 'fal fa-file',
-        label: 'Pages'
+        routeLink: 'users',
+        icon: 'bi bi-file-earmark-person',
+        label: 'customers'
     },
     {
         routeLink: 'media',
-        icon: 'fal fa-camera',
+        icon: 'bi bi-camera',
         label: 'Media'
     },
     {
         routeLink: 'settings',
-        icon: 'fal fa-cog',
+        icon: 'bi bi-gear',
         label: 'Settings'
     },
+       {
+        routeLink: 'journal',
+        icon: 'bi bi-journal-album',
+        label: 'Journal'
+    },
     {
-        routeLink: '',
-        icon: 'fal fa-cog',
+        routeLink: 'journal',
+        icon: 'bi bi-arrow-right-short',
         label: 'Menu with Children',
         submenuLevel1: [
             {
-                routeLink: '',
-                icon: 'fal fa-cog', // icon if needed
+                routeLink: 'journal',
+                icon: 'bi bi-arrow-right-short', // icon if needed
                 label: 'Sub menu level 1',
             },
             {

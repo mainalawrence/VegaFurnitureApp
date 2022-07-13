@@ -14,6 +14,14 @@ a{
 a:hover{
     color: #32cf9d;
 }
+.mr3{
+margin-right: 2%;
+}
+
+.mr3>svg:hover{
+    color: #32cf9d;
+}
+
 @media only screen and (max-width: 428px) {
 
     .mt {

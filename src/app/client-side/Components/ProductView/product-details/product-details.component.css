@@ -25,3 +25,23 @@ border-width: 0px;
 .grouping{
    display: flex;
 }
+.spe-a {
+   padding-bottom: 25px;
+}
+
+.spe-a ul {
+   margin: 0px;
+   padding: 0px;
+}
+
+.spe-a ul li p {
+   line-height: 34px;
+}
+
+.spe-a ul li {
+   border-bottom: 1px solid #eeeeee;
+}
+
+.spe-a ul li .col-md-4 {
+   padding-left: 0px;
+}

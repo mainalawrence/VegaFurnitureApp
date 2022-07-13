@@ -11,18 +11,25 @@ import { MediaComponent } from './Component/media/media.component';
 import { MainAdminComponent } from './Component/main-admin/main-admin.component';
 import { BodyComponent } from './Component/body/body.component';
 import { SidenavComponent } from './Component/sidenav/sidenav.component';
-//{path: '', component:MainAdminComponent},
+import { JournalComponent } from './Component/journal/journal.component';
+import { OrdersComponent } from './Component/orders/orders.component';
+import { UsersComponent } from './Component/users/users.component';
 const routes: Routes = [
-  {path:'',component:MainAdminComponent,children:[
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'statistics', component: StatisticsComponent},
-  {path: 'coupens', component: CoupensComponent},
-  {path: 'pages', component: PagesComponent},
-  {path: 'media', component: MediaComponent},
-  {path: 'settings', component: SettingsComponent}
-  ]}
+  {
+    path: '', component: MainAdminComponent, children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'statistics', component: StatisticsComponent },
+      { path: 'coupens', component: CoupensComponent },
+      { path: 'pages', component: PagesComponent },
+      { path: 'media', component: MediaComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: 'journal', component: JournalComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'orders', component: OrdersComponent }
+    ]
+  }
 ];
 
 @NgModule({
@@ -36,12 +43,16 @@ const routes: Routes = [
     CoupensComponent,
     PagesComponent,
     MediaComponent,
-    SettingsComponent
+    SettingsComponent,
+    JournalComponent,
+    OrdersComponent,
+    UsersComponent,
   ],
   imports: [
+    RouterModule.forChild(routes),
     CommonModule,
-    RouterModule.forChild(routes)
+
   ],
-  bootstrap:[MainAdminComponent,SidenavComponent]
+  bootstrap: [MainAdminComponent, SidenavComponent]
 })
 export class AdminSideModule { }
