@@ -4,9 +4,9 @@
     
         <div class="grid ">
             <div class="zoom" *ngFor="let product of Products ">
-                <a [routerLink]="['/products',product]">
+               
                     <app-product [product]="product"></app-product>
-                </a>
+                
             </div>
         </div>
         <!-- <app-pagination></app-pagination> -->

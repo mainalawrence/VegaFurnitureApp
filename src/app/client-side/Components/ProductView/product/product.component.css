@@ -60,3 +60,11 @@ svg:hover{
 
 }
 
+a{
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+a:hover{
+    color: white;
+}

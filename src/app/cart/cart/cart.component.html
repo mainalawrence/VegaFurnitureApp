@@ -1,0 +1,50 @@
+
+<div class="container mb-4">
+    <div class="left">
+        <div class="b-top">
+            <h4><b>{{cartservice.productCount()}}</b> Products in Cart</h4>
+        </div>
+       <div class="" *ngFor="let product of cartservice.products">
+           <hr>
+            <div class="product">
+                <div class="action">
+                    <div class="image-name ">
+                        <img src='{{product.image}}'
+                            alt="{{product.name}}">
+                        <h6> {{product.brand}}</h6>
+                    </div>
+                    <div class="price">
+                    <b>Cost</b> <h4>Ksh: {{product.price}}</h4>
+                    <b>Subtotal</b> <h4>Ksh: {{product.subtotal}}</h4>
+                    </div>
+                </div>
+                <div class="action">
+                    <div class="remove">
+                        <button (click)="cartservice.removeProductCart(product.id)"  class="zoom btn "> <img src="../../../assets/delete.svg" alt="delete">REMOVE</button>
+                    </div>
+                    <div class="add-sub">
+                        <button (click)="cartservice.reduceProductQuantityCart(product.id)" class="btn sub  zoom-out"><img src="../../../assets/sub.svg" alt=""></button>
+                        <label>{{product.quantity}}</label>
+                        <button (click)="cartservice.addProductQuantityCart(product.id)" class="btn add zoom-out"><img src="../../../assets/add.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+
+        
+    </div>
+    <div class="right">
+        <div class="title"><h4>CART SUMMARY</h4></div>
+        <hr>
+
+        <div class="subtotal"><h3>Total</h3> <h2>KSh {{cartservice.Total}}</h2></div>
+        <hr>
+        <!-- <button class="btn w-100 zoom-out">Login</button> -->
+        <div class="payment">
+            <a (click)="this.cartservice.createOrder()" class="btn btn-mpesa"><img class="mpesa zoom-out" src="../../../assets/mpesa.svg" alt="mpesa"></a>
+            <!-- <ngx-paypal [config]="payPalConfig"></ngx-paypal> -->
+        </div>
+
+    </div>
+</div>

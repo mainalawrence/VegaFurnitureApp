@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbActiveOffcanvas, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
-import { ProductFilterComponent } from '../product-filter/product-filter.component';
+import { ProductFilterComponent } from '../client-side/Components/product-filter/product-filter.component';
 
 @Component({
   selector: 'app-header',

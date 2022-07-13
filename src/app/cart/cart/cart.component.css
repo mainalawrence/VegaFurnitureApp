@@ -1,0 +1,141 @@
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+   
+}
+.left{
+    flex:0.7;
+    background-color: white;
+    margin-right: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    height: 500px !important;
+        overflow: scroll;
+}
+.action{
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    flex:0.3;
+    background-color: white;
+    flex-direction: 20%;
+    border-radius: 5px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+.b-top{
+border-width: 0 0 1px 0;
+  border-style: solid;
+  padding-left: 1%;
+  width: 100%;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+}
+.btn{
+    border: 0px;
+    background-color: orange;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    color: white;
+    padding: 2%;
+    border-radius: 4px;
+}
+.btn>img{
+    width: 30%;
+}
+.zoom{
+    transition: transform .2s; /* Animation */
+  }
+  .zoom:hover{
+      transform: scale(0.9);
+  }
+
+.image-name{
+    display: flex;
+    padding: 1%;
+    
+}
+.image-name>img{
+    width:20%;
+}
+.add-sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.remove{
+    width: 70%;
+}
+.add{
+margin-left: 2%;
+}
+.sub{
+    margin-right: 2%;
+
+}
+.add-sub>button{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5% !important;
+}
+.zoom-out{
+    transition: transform .2s; /* Animation */
+  }
+.zoom-out:hover{
+      transform: scale(1.1);
+  }
+  .subtotal{
+      display: flex;
+      justify-content:space-between;
+      margin: 5% 0px;
+  }
+  hr{
+      margin: 0 0 2% 0;
+  }
+  .w-100{
+      width: 100%;
+      text-align: center !important;
+      padding: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .payment{
+      display: flex;
+    flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 1%;
+      margin:  5% 0;
+  }
+  a{
+      width: 50%;
+  }
+  .mpesa{
+      width: 100%;
+  }
+  .paypal{
+      width: 40%;
+  }
+  .btn-mpesa{
+      width: 60%;
+      margin-bottom: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 166, 0, 0.753);
+
+  }
