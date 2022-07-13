@@ -1,0 +1,26 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <label for="dateOfBirth">Change User Role</label>
+                <div class="input-group">
+              
+                    <select [selectedIndex]="role"  id="role" class="form-select" aria-label="Default select example" #role>
+                        <option selected>Open this select menu</option>
+                        <option value="0">Users</option>
+                        <option value="1">Admin</option>
+                    </select>
+               
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark"(click)="OnHandleUpdateUser(role.value)" (click)="modal.close('Save click')">Save</button>
+    </div>
+</ng-template>
+<img (click)="open(content)" class="zoom" style="width: 35%;" src="../../../../../assets/edite.svg">

@@ -40,10 +40,10 @@
 
         <div class="subtotal"><h3>Total</h3> <h2>KSh {{cartservice.Total}}</h2></div>
         <hr>
-        <!-- <button class="btn w-100 zoom-out">Login</button> -->
+        <button class="btn w-100 zoom-out">Login</button>
         <div class="payment">
             <a (click)="this.cartservice.createOrder()" class="btn btn-mpesa"><img class="mpesa zoom-out" src="../../../assets/mpesa.svg" alt="mpesa"></a>
-            <!-- <ngx-paypal [config]="payPalConfig"></ngx-paypal> -->
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
         </div>
 
     </div>

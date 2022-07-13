@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
 import { RouterModule } from '@angular/router';
-// import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 
 
@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
     }
     ]),
     CommonModule,
-    // NgxPayPalModule
+    NgxPayPalModule
   ]
 })
 export class CartModule { }

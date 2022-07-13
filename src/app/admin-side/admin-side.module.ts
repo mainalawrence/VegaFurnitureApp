@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './Component/products/products.component';
@@ -13,7 +14,11 @@ import { BodyComponent } from './Component/body/body.component';
 import { SidenavComponent } from './Component/sidenav/sidenav.component';
 import { JournalComponent } from './Component/journal/journal.component';
 import { OrdersComponent } from './Component/orders/orders.component';
-import { UsersComponent } from './Component/users/users.component';
+import { UserComponent } from './Component/Users/users/users.component';
+import { UpdateUsersComponent } from './Component/Users/update-users/update-users.component';
+import { TrushUsersComponent } from './Component/Users/trush-users/trush-users.component';
+import { UsersTableComponent } from './Component/Users/users-table/users-table.component';
+
 const routes: Routes = [
   {
     path: '', component: MainAdminComponent, children: [
@@ -26,7 +31,7 @@ const routes: Routes = [
       { path: 'media', component: MediaComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'journal', component: JournalComponent },
-      { path: 'users', component: UsersComponent },
+      { path: 'users', component: UserComponent },
       { path: 'orders', component: OrdersComponent }
     ]
   }
@@ -46,13 +51,18 @@ const routes: Routes = [
     SettingsComponent,
     JournalComponent,
     OrdersComponent,
-    UsersComponent,
+    UserComponent,
+    UpdateUsersComponent,
+    TrushUsersComponent,
+    UsersTableComponent
+    
   ],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-
+    NgbModule
   ],
-  bootstrap: [MainAdminComponent, SidenavComponent]
+  bootstrap: [MainAdminComponent, SidenavComponent,UserComponent]
+  
 })
 export class AdminSideModule { }
