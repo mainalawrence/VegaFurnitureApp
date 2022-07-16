@@ -14,50 +14,73 @@
         <div>
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav">
-                <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
-                <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
-                <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
-                    <ul class="dropdown-menu mt-5">
-                        <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                        <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-                        <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
-                    </ul>
-                </li>
-                <div class="link dropdown">
-                    <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
-                    <div class="dropdown-menu">
-                       <div class="d-flex flex-col bg-dark p-4">
-                            <div class="" *ngFor="let i of index">
-                                <img src="../../assets/12.png" />
-                            </div>
-                       </div>
-                    </div>
-                  
-                </div>
-                <div class="link dropdown">
-                    <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me ..</a>
-                    <div class="dropdown-menu" style=`width:${window.innerWidth};`>
-                        <div class="d-flex flex-col bg-dark p-4">
-                            <div class="">
-                                   <img src="../../assets/12.png"/>
+                <!-- BEDROOM -->
+                    <div class="link dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">BEDROOM</a>
+                        <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                            <div class="d-flex flex-col bg-dark p-4">
+                                <app-bed-room></app-bed-room>
                             </div>
                         </div>
                     </div>
-                
-                </div>
-                <div class="link dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
-                        <div class="dropdown-menu">
-                            <div class="d-flex flex-col bg-dark p-4">
-                                <div class="" *ngFor="let i of index">
-                                   <img src="../../assets/12.png"/>
+
+                    <!-- FURNITURE -->
+                        <div class="link dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">FURNITURE</a>
+                            <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                                <div class="d-flex flex-col bg-dark p-4">
+                                    <app-furniture></app-furniture>
                                 </div>
                             </div>
                         </div>
-                    
-                    </div>
+                    <!-- LIGHTING -->
+                        <div class="link dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">LIGHTING</a>
+                            <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                                <div class="d-flex flex-col bg-dark p-4">
+                                 <app-lighting></app-lighting>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- OUTDOOR -->
+                        <div class="link dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">OUTDOOR</a>
+                            <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                                <div class="d-flex flex-col bg-dark p-4">
+                                   <app-out-door></app-out-door>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- DINNING -->
+                        <div class="link dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">DINNING</a>
+                            <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                                <div class="d-flex flex-col bg-dark p-4">
+                                   <app-dinning></app-dinning>
+                                </div>
+                            </div>                       
+                        </div>
+                    <!--KITCHEN  -->
+                        <div class="link dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">KITECHEN</a>
+                            <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                                <div class="d-flex flex-col bg-dark p-4">
+                                   <app-kitchen></app-kitchen>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- ART -->
+                        <div class="link dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">ART</a>
+                            <div class="dropdown-menu" style=`width:${window.innerWidth};`>
+                                <div class="d-flex flex-col bg-dark p-4">
+                                  <app-art></app-art>
+                                </div>
+                            </div>
+                        
+                        </div>
                     
             </ul>
         </div>
