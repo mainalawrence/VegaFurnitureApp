@@ -11,6 +11,58 @@
             </button>
             <span class="sidebar-toggle d-flex mr-2 "> <i class="hamburger align-self-center"></i></span>
         </div>
+        <div>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
+                <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
+                    <ul class="dropdown-menu mt-5">
+                        <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                        <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                        <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                    </ul>
+                </li>
+                <div class="link dropdown">
+                    <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
+                    <div class="dropdown-menu">
+                       <div class="d-flex flex-col bg-dark p-4">
+                            <div class="" *ngFor="let i of index">
+                                <img src="../../assets/12.png" />
+                            </div>
+                       </div>
+                    </div>
+                  
+                </div>
+                <div class="link dropdown">
+                    <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
+                    <div class="dropdown-menu">
+                        <div class="d-flex flex-col bg-dark p-4">
+                            <div class="" *ngFor="let i of index">
+                                   <img src="../../assets/12.png"/>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="link dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hover me </a>
+                        <div class="dropdown-menu">
+                            <div class="d-flex flex-col bg-dark p-4">
+                                <div class="" *ngFor="let i of index">
+                                   <img src="../../assets/12.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+            </ul>
+        </div>
+           
+        </div>
 
       <div class="container-fluid d-flex  ">
             <div #Category="ngbCollapse" [(ngbCollapse)]="navbarCollapse"

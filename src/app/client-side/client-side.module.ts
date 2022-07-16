@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './Components/ProductView/product-list/product-list.component';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
 import { ProductComponent } from './Components/ProductView/product/product.component';
 import { ProductFilterComponent } from './Components/product-filter/product-filter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -16,8 +14,6 @@ import { CategoryListComponent } from './Components/category-list/category-list.
 @NgModule({
   declarations: [
     ProductListComponent,
-    HeaderComponent,
-    FooterComponent,
     ProductComponent,
     ProductFilterComponent,
     ProductDetailsComponent,
@@ -40,6 +36,6 @@ import { CategoryListComponent } from './Components/category-list/category-list.
     ])
 
   ],
-  bootstrap:[ProductFilterComponent,FooterComponent,HeaderComponent]
+  bootstrap:[ProductFilterComponent]
 })
 export class ClientSideModule { }

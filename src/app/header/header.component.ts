@@ -9,7 +9,10 @@ import { ProductFilterComponent } from '../client-side/Components/product-filter
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+ 
+  index=[10,1,1,1];
   public navbarCollapse=true;
+  
   public searchBarOpen!:boolean;
 
    constructor(private offcanvasService: NgbOffcanvas,public router:Router) {}

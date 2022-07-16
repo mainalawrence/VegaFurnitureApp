@@ -111,7 +111,7 @@ svg{
             
         }
         .brand{
-            
+           font-weight: bold; 
         }
     /* .container-fluid{
     display: flex;
@@ -136,3 +136,36 @@ width: 15% !important;
 
 /*tablet*/
 @media only screen and (min-width: 600px) and (max-width: 810px) {}
+
+
+
+
+
+@media all and (min-width: 992px) {
+    .navbar .link .nav-item .dropdown-menu {
+       
+        display: none;
+        width: 100% !important;
+    }
+
+    .navbar .link:hover .nav-link {
+        color: white;
+       
+    }
+
+    .navbar .link:hover .dropdown-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       padding: 40% !important;
+       background-color: transparent;
+       border-radius: 0px;
+       border-width: 0px;
+        
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        margin-top: -3;
+    }
+}
