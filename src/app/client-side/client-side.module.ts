@@ -9,6 +9,10 @@ import { ProductDetailsComponent } from './Components/ProductView/product-detail
 import { FormsModule } from '@angular/forms';
 import { CategoryComponent } from './Components/category/category.component';
 import { CategoryListComponent } from './Components/category-list/category-list.component';
+import { HeaderModuleModule } from '../header-module/header-module.module';
+
+
+
 
 
 @NgModule({
@@ -20,20 +24,20 @@ import { CategoryListComponent } from './Components/category-list/category-list.
     CategoryComponent,
     CategoryListComponent,
     
+    
   ],
   imports: [
     CommonModule,
     NgbModule,
-    FormsModule,
     RouterModule.forChild([
       {path:'',children:[
         {path:'',component:ProductListComponent},
         {path:'category',component:CategoryListComponent},
         {path:':id',component:ProductDetailsComponent}
-      
-
       ]}
-    ])
+    ]),
+    HeaderModuleModule
+
 
   ],
   bootstrap:[ProductFilterComponent]

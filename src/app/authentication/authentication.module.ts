@@ -4,7 +4,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../header-module/header/header.component';
 
 
 

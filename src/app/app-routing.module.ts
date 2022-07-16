@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './Error.Component/error.component';
 
 const routes: Routes = [
-  {path:'products', loadChildren:()=>import('./client-side/client-side.module').then(mod=>mod.ClientSideModule)},
+  {path:'products', 
+  loadChildren:()=>import('./client-side/client-side.module').then(mod=>mod.ClientSideModule),
+  
+},
   {path:'admin',loadChildren:()=>import('./admin-side/admin-side.module').then(mod=>mod.AdminSideModule)},
   {path:'auth',loadChildren:()=>import('./authentication/authentication.module').then(mod=>mod.AuthenticationModule)},
   {path:'',redirectTo:'/products' ,pathMatch:'full'},
@@ -11,6 +14,7 @@ const routes: Routes = [
     path:'cart',
     loadChildren: () => import('./cart/cart.module').then(mod => mod.CartModule)
   },
+
    { path:'**',component:ErrorComponent}
 
 ];

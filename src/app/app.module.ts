@@ -9,26 +9,24 @@ import { JwtInterceptor } from './authentication/Services/jwt.interceptor';
 import { ErrorComponent } from './Error.Component/error.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderModuleModule } from './header-module/header-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    HeaderComponent,
     FooterComponent
- 
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
     HttpClientModule,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+   
     
   ],
   providers: [
@@ -38,6 +36,7 @@ import { FooterComponent } from './footer/footer.component';
       multi: true
     }
   ],
-  bootstrap: [AppComponent,HeaderComponent,FooterComponent]
+  bootstrap: [AppComponent,FooterComponent],
+  exports:[FooterComponent]
 })
 export class AppModule { }
