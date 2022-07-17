@@ -12,6 +12,7 @@ import { KitchenComponent } from './Components/kitchen/kitchen.component';
 import { ArtComponent } from './Components/art/art.component';
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -27,7 +28,8 @@ import { ArtComponent } from './Components/art/art.component';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    
   
   ],
   bootstrap:[HeaderComponent],

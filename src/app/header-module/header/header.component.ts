@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbActiveOffcanvas, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
+import { window } from 'rxjs';
 import { ProductFilterComponent } from '../../client-side/Components/product-filter/product-filter.component';
 
 @Component({
@@ -11,6 +12,9 @@ import { ProductFilterComponent } from '../../client-side/Components/product-fil
 export class HeaderComponent implements OnInit {
  
   index=[10,1,1,1];
+  public getScreenWidth: any;
+  public getScreenHeight: any;
+
   public navbarCollapse=true;
   
   public searchBarOpen!:boolean;
@@ -19,11 +23,21 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.searchBarOpen=false
+    this.searchBarOpen=false;
+   
+    console.log("with " );
+    
+  }
+
+    @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+
   }
   open(){
 const offcanvasRef = this.offcanvasService.open(ProductFilterComponent);
   }
+
+
 
 
 }
