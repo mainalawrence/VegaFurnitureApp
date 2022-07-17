@@ -11,8 +11,6 @@ import { DinningComponent } from './Components/dinning/dinning.component';
 import { KitchenComponent } from './Components/kitchen/kitchen.component';
 import { ArtComponent } from './Components/art/art.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -29,8 +27,6 @@ import { ArtComponent } from './Components/art/art.component';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    
-  
   ],
   bootstrap:[HeaderComponent],
   exports:[HeaderComponent]
