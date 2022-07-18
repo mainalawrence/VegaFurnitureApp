@@ -1,5 +1,4 @@
-
-
+<div class="d-flex flex-column " style="width: 100%;">
 <nav style="background-color:#32cf9d;" class="navbar navbar-expand-lg navbar-dark sticky-top ">
 <div class="container-fluid p-l-1 align-items-center ">
         <img routerLink="/products" class="zoom brand" src="../../../assets/brand2.svg" alt="filter" />
@@ -62,9 +61,9 @@
                             </div>                       
                         </div>
                     <!--KITCHEN  -->
-                        <div class="link dropdown">
+                        <div class="link dropdown" style="width: 100%;">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">KITECHEN</a>
-                            <div class="dropdown-menu " style="width: 900px;">
+                            <div class="dropdown-menu " >
                                 <div class="d-flex flex-col bg-dark p-4">
                                    <app-kitchen></app-kitchen>
                                 </div>
@@ -81,8 +80,11 @@
                             </div>
                         
                         </div>
+
+                    <!-- testing -->
                     
             </ul>
+            
         </div>
            
         </div>
@@ -135,8 +137,20 @@
             </div>
       </div>
     </div>
-        </nav>
+</nav>
 
+    <div class="container-fluid menudropdown bg-dark text-light">
+        <div class="container-fluid">
+            <div class="d-flex flex-col p-4  justify-content-center ">
+                <app-art></app-art>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+</div>
 
            
 
