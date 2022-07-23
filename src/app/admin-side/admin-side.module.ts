@@ -3,7 +3,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './Component/products/products.component';
-import { StatisticsComponent } from './Component/statistics/statistics.component';
+import { StatisticsComponent } from './Component/Report/statistics/statistics.component';
 import { PagesComponent } from './Component/pages/pages.component';
 import { SettingsComponent } from './Component/settings/settings.component';
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
@@ -18,6 +18,7 @@ import { UserComponent } from './Component/Users/users/users.component';
 import { UpdateUsersComponent } from './Component/Users/update-users/update-users.component';
 import { TrushUsersComponent } from './Component/Users/trush-users/trush-users.component';
 import { UsersTableComponent } from './Component/Users/users-table/users-table.component';
+import { ReportComponent } from './Component/Report/report/report.component';
 
 const routes: Routes = [
   {
@@ -44,7 +45,6 @@ const routes: Routes = [
     SidenavComponent,
     DashboardComponent,
     ProductsComponent,
-    StatisticsComponent,
     CoupensComponent,
     PagesComponent,
     MediaComponent,
@@ -54,7 +54,9 @@ const routes: Routes = [
     UserComponent,
     UpdateUsersComponent,
     TrushUsersComponent,
-    UsersTableComponent
+    UsersTableComponent,
+    ReportComponent,
+    StatisticsComponent
     
   ],
   imports: [
