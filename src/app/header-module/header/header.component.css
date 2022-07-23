@@ -134,6 +134,7 @@ width: 15% !important;
 
 
 
+
 /*tablet*/
 @media only screen and (min-width: 600px) and (max-width: 810px) {}
 
@@ -184,8 +185,7 @@ width: 15% !important;
     }
 
     .dropdown-menu  {
-        position: absolute;
-            top: 57px;
+             position: absolute; 
             z-index: 3;
             width: 100%;
             background-color: #5a5f66;
