@@ -1,0 +1,24 @@
+a {
+    color: white;
+    text-decoration: none;
+   
+}
+
+a:hover {
+    color: aquamarine;
+
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
