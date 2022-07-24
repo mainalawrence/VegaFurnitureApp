@@ -12,7 +12,7 @@
 }
 
 .card {
-    width: 30%;
+    width: 40%;
     padding: 3% 2%;
     background-color: white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -185,4 +185,17 @@ a:hover{
 
 
 /*tablet*/
-@media only screen and (min-width: 600px) and (max-width: 810px) {}
+@media only screen and (min-width: 390px) and (max-width: 810px) {
+.container.center {
+        width: 90% !important;
+    }
+
+    .details {
+        flex-direction: column !important;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
