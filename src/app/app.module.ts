@@ -9,14 +9,21 @@ import { JwtInterceptor } from './authentication/Services/jwt.interceptor';
 import { ErrorComponent } from './Error.Component/error.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderModuleModule } from './header-module/header-module.module';
+import { FooterComponent } from './Footer/footer/footer.component';
+import { AboutUsComponent } from './Footer/about-us/about-us.component';
+import { CustomerServiceComponent } from './Footer/customer-service/customer-service.component';
+import { PrivacyPolicyComponent } from './Footer/privacy-policy/privacy-policy.component';
+import { ContactUsComponent } from './Footer/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent,
+    CustomerServiceComponent,
+    PrivacyPolicyComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

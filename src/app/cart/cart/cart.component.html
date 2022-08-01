@@ -1,5 +1,16 @@
+<!-- <app-header></app-header> -->
+<div class="container justify-content-center">
+    <h2 class="empty-text">Shopping Cart</h2>
+</div>
+<div *ngIf="true" class="empty-container">
+<div class="container d-flex empty-text-nav">
+    <h3>Your cart is empty.</h3>
+    <h3>Bummer!</h3>
+    <button  routerLink="/" class="btn empty-btn w-45"><h3>Shop Awsome Design</h3></button>
+</div>
+</div>
 
-<div class="container mb-4">
+<div *ngIf="false" class="container mb-4">
     <div class="left">
         <div class="b-top">
             <h4><b>{{cartservice.productCount()}}</b> Products in Cart</h4>

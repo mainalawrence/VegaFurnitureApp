@@ -10,6 +10,7 @@ import { OutDoorComponent } from './Components/out-door/out-door.component';
 import { DinningComponent } from './Components/dinning/dinning.component';
 import { KitchenComponent } from './Components/kitchen/kitchen.component';
 import { ArtComponent } from './Components/art/art.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ArtComponent } from './Components/art/art.component';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
+    RouterModule
   ],
   bootstrap:[HeaderComponent],
   exports:[HeaderComponent]
