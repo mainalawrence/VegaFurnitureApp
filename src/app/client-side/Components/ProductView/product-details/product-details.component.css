@@ -56,3 +56,13 @@ border-width: 0px;
 .zoom:hover {
    transform: scale(1.1);
 }
+
+
+
+/*phone*/
+@media only screen and (max-width: 428px) {
+   .ma-sm {
+         margin-top: 10%;
+      }
+
+   }
