@@ -18,7 +18,6 @@ export class CartService {
    
   addProductCart(product:any){
 
-     
    if(this.products.find(item=>item.id===product.id)===undefined){
      product[0].image='http://localhost:4000/Product/'+product[0].images.split(',')[0];
      this.products.push(product[0]);
@@ -26,6 +25,8 @@ export class CartService {
    }
   this.TotolPrice()
   }
+
+
    removeProductCart(id:string){
     this.products=this.products.filter(product=>{
        if(product.id !==id){
