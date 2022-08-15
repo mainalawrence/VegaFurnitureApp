@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -8,14 +9,15 @@ import { Component, OnInit,Input } from '@angular/core';
 export class ProductComponent implements OnInit {
   @Input() product:any={};
   private hearts:number=0;
-  constructor() { }
+  constructor(public cartService:CartService) { }
 
   ngOnInit(): void {
   }
   HandleHeart(){
-    this.hearts++;
-    console.log(this.hearts);
-
+    
+  }
+  addToCart(){   
+    this.cartService.addProductCart(this.product);
   }
 
 }

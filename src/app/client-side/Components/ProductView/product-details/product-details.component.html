@@ -117,10 +117,10 @@
                                 <option value="">color</option>
                            </select>
                            <div class="input-group zoom">
-                            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">-</button>
-                            <input type="number" value="1" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+                            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" (click)="ReduceproductAMount()">-</button>
+                            <input type="number" [value]="ProductAmount" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
                                 aria-label="Upload">
-                            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">+</button>
+                            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" (click)="AddproductAMount()">+</button>
                         </div>
                         </div>
                         <div class="container-fluid">

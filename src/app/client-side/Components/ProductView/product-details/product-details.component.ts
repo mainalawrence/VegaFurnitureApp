@@ -11,7 +11,10 @@ import { ProductStateService } from 'src/app/client-side/Services/product-state.
 export class ProductDetailsComponent implements OnInit {
   Product:any={name:'Chai'};
   id:any;
-  images:string[] = []
+  images:string[] = [];
+
+  ProductAmount:number=1;
+
   constructor(
     public cartServices:CartService,
     private router:ActivatedRoute,
@@ -37,6 +40,22 @@ export class ProductDetailsComponent implements OnInit {
   }
  public addToCart(){
     this.cartServices.addProductCart(this.Product)
+  }
+
+  AddproductAMount(){
+    console.log("Add AMount");
+    
+ if(this.ProductAmount<10){
+      this.ProductAmount++;
+    }
+  }
+    ReduceproductAMount(){
+    console.log("Reduce Amount");
+      
+
+    if(this.ProductAmount>1){
+      this.ProductAmount--;
+    }
   }
 
 }

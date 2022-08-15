@@ -1,12 +1,17 @@
 <app-header></app-header>
 
 <div class="container-fluid">
+   
         <div class="grid ">
             <div class="zoom" *ngFor="let product of Products ">
                     <app-product [product]="product"></app-product>
             </div>
         </div>
-        <!-- <app-pagination></app-pagination> -->
+ 
 </div>
-
+<div *ngIf="collectionSize>pageSize" class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+                (pageChange)="refreshUsers()">
+        </ngb-pagination>
+</div>
 
