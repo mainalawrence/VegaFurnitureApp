@@ -22,16 +22,11 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.searchBarOpen=false;
-   
-    console.log();
-    
+    this.searchBarOpen=false;   
   }
 
     @HostListener('window:resize', ['$event'])
   onWindowResize() {
-    
-   
      
   }
   open(){
