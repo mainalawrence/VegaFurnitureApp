@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { CategoryComponent } from './Components/category/category.component';
 import { CategoryListComponent } from './Components/category-list/category-list.component';
 import { HeaderModuleModule } from '../header-module/header-module.module';
+import { CartModule } from '../cart/cart.module';
 
 
 
@@ -37,8 +38,6 @@ import { HeaderModuleModule } from '../header-module/header-module.module';
       ]}
     ]),
     HeaderModuleModule
-
-
   ],
   bootstrap:[ProductFilterComponent]
 })

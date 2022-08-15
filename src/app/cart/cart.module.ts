@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
 import { RouterModule } from '@angular/router';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { HeaderModuleModule } from '../header-module/header-module.module';
 
 
 
@@ -20,7 +21,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     }
     ]),
     CommonModule,
-    NgxPayPalModule
+    NgxPayPalModule,
+    HeaderModuleModule
   ]
 })
 export class CartModule { }

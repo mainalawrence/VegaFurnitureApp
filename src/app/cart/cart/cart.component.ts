@@ -7,15 +7,24 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+// products
+
+
  public payPalConfig ? : IPayPalConfig;
  showCancel:boolean=false
  showError:boolean=false
  showSuccess:any;
-  constructor(public cartservice:CartService) { }
+  constructor(public cartservice:CartService) {
+
+    
+   }
+
 
    ngOnInit(): void {
         this.initConfig();
+        
     }
+
     private initConfig(): void {
         this.payPalConfig = {
             currency: 'Ksh',
@@ -68,6 +77,11 @@ export class CartComponent implements OnInit {
                 //this.resetStatus();
             }
         };
+    }
+
+    // cart status
+   public isCartEmpty():boolean{
+      return  !this.cartservice.products.length;
     }
 
 }
