@@ -11,6 +11,7 @@ import { DinningComponent } from './Components/dinning/dinning.component';
 import { KitchenComponent } from './Components/kitchen/kitchen.component';
 import { ArtComponent } from './Components/art/art.component';
 import { RouterModule } from '@angular/router';
+import { PhoneMenuComponent } from './Components/phone-menu/phone-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     OutDoorComponent,
     DinningComponent,
     KitchenComponent,
-    ArtComponent
+    ArtComponent,
+    PhoneMenuComponent
   ],
   imports: [
     NgbModule,

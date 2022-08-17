@@ -1,8 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbActiveOffcanvas, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
-import { window, windowToggle } from 'rxjs';
 import { ProductFilterComponent } from '../../client-side/Components/product-filter/product-filter.component';
+import { PhoneMenuComponent } from '../Components/phone-menu/phone-menu.component';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,6 @@ import { ProductFilterComponent } from '../../client-side/Components/product-fil
 export class HeaderComponent implements OnInit {
  
   index=[10,1,1,1];
-  public getScreenWidth: any;
 
   public navbarCollapse=true;
   
@@ -30,9 +29,12 @@ export class HeaderComponent implements OnInit {
      
   }
   open(){
-const offcanvasRef = this.offcanvasService.open(ProductFilterComponent);
+    const offcanvasRef = this.offcanvasService.open(ProductFilterComponent);
   }
 
+  menuOpen(){
+    const offcanvasRef = this.offcanvasService.open(PhoneMenuComponent);
+  }
 
 
 

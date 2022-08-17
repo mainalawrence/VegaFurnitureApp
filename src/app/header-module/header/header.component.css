@@ -142,7 +142,7 @@ width: 15% !important;
 
 
 
-@media all and (min-width: 992px) {
+@media (min-width: 992px) {
     .navbar .link .nav-item .dropdown-menu {
         display: none;
         position: absolute;

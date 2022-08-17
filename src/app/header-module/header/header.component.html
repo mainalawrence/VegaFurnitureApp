@@ -1,29 +1,42 @@
 <div class="d-flex flex-column " style="width: 100%;">
-<nav style="background-color:#32cf9d;" class="navbar navbar-expand-lg navbar-dark sticky-top ">
-<div class="container-fluid p-l-1 align-items-center ">
-        <img routerLink="/products" class="zoom brand" src="../../../assets/brand2.svg" alt="filter" />
-
-        <div class=" align-items-center">
-            <button (click)="Category.toggle()" style="outline: none !important;outline-width: 0px !important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <span class="sidebar-toggle d-flex mr-2 "> <i class="hamburger align-self-center"></i></span>
-        </div>
-        <div>
-        <div class="collapse navbar-collapse" id="main_nav">
-            <ul class="navbar-nav">
-                <!-- BEDROOM -->
-                    <div class="link ">
-                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">BEDROOM</a>
-                        <div class="dropdown-menu " style="width: 100%;">
-                            <div class="d-flex flex-col bg p-4  justify-content-center">
-                                <app-bed-room></app-bed-room>
+    <nav style="background-color:#32cf9d;" class="navbar navbar-expand-lg navbar-dark sticky-top ">
+        <div class="container-fluid p-l-1 align-items-center p-3">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+            <div class=" align-items-center">
+                <button (click)="menuOpen()" style="outline: none !important;outline-width: 0px !important;"
+                    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="sidebar-toggle d-flex mr-2 "> <i class="hamburger align-self-center"></i></span>
+            </div>
+            
+                <div class="">
+                    <p>Vega'sLane</p>
+            </div>
+                <div class=" align-items-center">
+                    <button (click)="Category.toggle()" style="outline: none !important;outline-width: 0px !important;"
+                        class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <span class="sidebar-toggle d-flex mr-2 "> <i class="hamburger align-self-center"></i></span>
+                </div>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav">
+                        <!-- BEDROOM -->
+                        <div class="link ">
+                            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">BEDROOM</a>
+                            <div class="dropdown-menu " style="width: 100%;">
+                                <div class="d-flex flex-col bg p-4  justify-content-center">
+                                    <app-bed-room></app-bed-room>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- FURNITURE -->
+                        <!-- FURNITURE -->
                         <div class="link ">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">FURNITURE</a>
                             <div class="dropdown-menu" style="width: 100%;">
@@ -32,99 +45,104 @@
                                 </div>
                             </div>
                         </div>
-                    <!-- LIGHTING -->
+                        <!-- LIGHTING -->
                         <div class="link ">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">LIGHTING</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4">
-                                 <app-lighting></app-lighting>
+                                    <app-lighting></app-lighting>
                                 </div>
                             </div>
                         </div>
-                    <!-- OUTDOOR -->
+                        <!-- OUTDOOR -->
                         <div class="link ">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">OUTDOOR</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4">
-                                   <app-out-door></app-out-door>
+                                    <app-out-door></app-out-door>
                                 </div>
                             </div>
                         </div>
 
-                    <!-- DINNING -->
+                        <!-- DINNING -->
                         <div class="link ">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">DINNING</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4">
-                                   <app-dinning></app-dinning>
+                                    <app-dinning></app-dinning>
                                 </div>
-                            </div>                       
+                            </div>
                         </div>
-                    <!--KITCHEN  -->
-                        <div class="link" >
+                        <!--KITCHEN  -->
+                        <div class="link">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">KITCHEN</a>
                             <div class="dropdown-menu " style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4">
-                                   <app-kitchen></app-kitchen>
+                                    <app-kitchen></app-kitchen>
                                 </div>
                             </div>
                         </div>
 
-                    <!-- ART -->
+                        <!-- ART -->
                         <div class="link">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">ART</a>
                             <div class="dropdown-menu art" style="width: 100%;">
                                 <div class="d-flex flex-col bg p-4  justify-content-center ">
-                                  <app-art></app-art>
+                                    <app-art></app-art>
                                 </div>
                             </div>
-                        
+
                         </div>
 
-                    <!-- testing -->
-                    
-            </ul>
-            
-        </div>
-           
-        </div>
+                        <!-- testing -->
 
-      <div class="container-fluid d-flex  ">
-            <div #Category="ngbCollapse" [(ngbCollapse)]="navbarCollapse"
-                class="collapse navbar-collapse  align-items-center" id="navbarSupportedContent">
-            
-                <div class="row  container-fluid  align-items-center mt-3 lign-up">
-                    <div class=" d-lg-flex justify-content-end ">
-                   
-                        <svg ngbPopover="filter Products" triggers="mouseenter:mouseleave" (click)="open()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-filter zoom"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                        </svg>
+                    </ul>
 
-                        <svg ngbPopover="signin/signup" triggers="mouseenter:mouseleave" routerLink="/auth/login" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="currentColor" class="bi bi-person zoom"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                        </svg>
-                        
-                            <svg ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="currentColor" class="bi bi-cart zoom"
-                                viewBox="0 0 16 16">
+                </div>
+
+            </div>
+
+            <div class="w-100 mt-2 d-flex  ">
+                <div #Category="ngbCollapse" [(ngbCollapse)]="navbarCollapse"
+                    class="collapse navbar-collapse  align-items-center" id="navbarSupportedContent">
+
+                    <div class="row w-100 d-flex  align-items- mt-1 lign-up bg-dangerr">
+                        <div class=" d-lg-flex justify-content-end ">
+
+                            <svg ngbPopover="filter Products" triggers="mouseenter:mouseleave" (click)="open()"
+                                xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-filter zoom" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+
+                            <svg ngbPopover="signin/signup" triggers="mouseenter:mouseleave" routerLink="/auth/login"
+                                xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-person zoom" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+
+                            <svg ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart"
+                                xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-cart zoom" viewBox="0 0 16 16">
                                 <path
                                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                             </svg>
-                    
-                        <svg ngbPopover="Search" triggers="mouseenter:mouseleave" (click)="this.searchBarOpen=!searchBarOpen" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="currentColor" class="bi bi-search zoom"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    
-                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
-                            data-bs-content="Disabled popover">
-                            <button popoverTitle="Pop title" routerLink="/products" class="btn zoom">Logout</button>
-                        </span>
-                    </div>
+
+                            <svg ngbPopover="Search" triggers="mouseenter:mouseleave"
+                                (click)="this.searchBarOpen=!searchBarOpen" xmlns="http://www.w3.org/2000/svg"
+                                width="30" height="30" fill="currentColor" class="bi bi-search zoom"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+
+                            <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"
+                                data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+                                <button popoverTitle="Pop title" routerLink="/products" class="btn zoom">Logout</button>
+                            </span>
+                        </div>
                         <div hidden="searchBarOpen" class="form center col-sm">
                             <form #search="ngForm">
                                 <input type="text" placeholder="  search.." ngModel name="search">
@@ -133,33 +151,11 @@
                                 </button>
                             </form>
                         </div>
+                    </div>
                 </div>
             </div>
-      </div>
-    </div>
-</nav>
-
-    <div class="container-fluid menudropdown bg-dark text-light">
-        <div class="container-fluid">
-            <div class="d-flex flex-col p-4  justify-content-center ">
-                <app-art></app-art>
-            </div>
         </div>
-    
-    </div>
-
+    </nav>
 
 
 </div>
-
-           
-
-
-
-
-    
-
-
-
-
-
