@@ -1,107 +1,366 @@
 <div class="container-fluid w-100">
-    <div class="offcanvas-header "  style="background-color:#32cf9d;">
+    <div class="offcanvas-header " style="background-color:#32cf9d;">
         <h5 class="offcanvas-title">Menu</h5>
         <button type="button" class="btn-close" aria-label="Close" (click)="this.getDismissReason('h')"></button>
     </div>
     <div class="offcanvas-body">
         <div class="container-fluid bg-light">
             <div class="row">
-                <ul class="nav flex-column">
+                <div class="nav flex-column W-100">
                     <li class="nav-item mb-4">
                         <button (click)="Category.toggle();" type="button"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a (click)="getDismissReason('h')">Category</a> <img
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                                (click)="getDismissReason('h')">BEDROOM</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
-                        <!-- Category -->
+                        <!-- BED ROOM -->
                         <div #Category="ngbCollapse" [(ngbCollapse)]="CategoryCollapsed">
-                            <div class=" w-80  m-4 ">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Desktop
-                                    </label>
+                            <ul class="col-12 bg-dark p-3">
+                                <div class="text-caps mb-4 zoom">
+                                    <a href="/collections/furniture">All Furniture</a>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Laptop
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Acessories
-                                    </label>
-                                </div>
-                            </div>
+                                <li class="text-caps mb-1 zoom">
+                                    <a href="/collections/sofas"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Sofas
+                                    </a>
+                                </li>
+
+                                <li class="text-caps  mb-1  zoom">
+                                    <a href="/collections/chairs"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Chairs
+                                    </a>
+                                </li>
+
+                                <li class="text-caps  mb-1  zoom">
+                                    <a href="/collections/tables-desks"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Tables + Desks
+                                    </a>
+                                </li>
+
+                                <li class="text-caps  mb-1 zoom">
+                                    <a href="/collections/shelving" class=" wrap">
+                                        Shelving
+                                    </a>
+                                </li>
+
+                                <li class="text-caps  mb-1 zoom">
+                                    <a href="/collections/sideboards-cabinets"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Sideboards + Cabinets
+                                    </a>
+                                </li>
+
+                                <li class="text-caps  mb-1 zoom">
+                                    <a href="/collections/stools-benches-ottomans"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Stools + Benches + Ottomans
+                                    </a>
+                                </li>
+
+                                <li class="text-caps  mb-1  zoom">
+                                    <a href="/collections/kids-baby-furniture"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Kids' + Baby Furniture
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="nav-item mb-4">
                         <button type="button" (click)="Price.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 ">Price <img
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                                (click)="getDismissReason('h')">FURNITURE</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
 
-                        <!-- Price -->
+                        <!-- Furniture -->
                         <div #Price="ngbCollapse" [(ngbCollapse)]="PriceCollapsed">
-                            <div class="row d-flex w-100 m-4 justify-content-between align-item-center col-sm">
-                                <div class="input-group flex-nowrap">
-                                    <span class="input-group-text" id="addon-wrapping col-sm">Ksh</span>
-                                    <input type="text" class="form-control" value="100" aria-label="Username"
-                                        aria-describedby="addon-wrapping">
+                            <ul class="col-12 bg-dark ">
+                                <div class="mb-4 zoom">
+                                    <a href="/collections/kitchen">All Furnitures </a>
                                 </div>
-                                <label class="btn">To</label>
-                                <div class="input-group flex-nowrap">
-                                    <span class="input-group-text" id="addon-wrapping col-sm">Ksh</span>
-                                    <input type="text" class="form-control" value="10000" aria-label="Username"
-                                        aria-describedby="addon-wrapping">
-                                </div>
-                                <button class="btn btn-default ml-2"><img
-                                        src="../../../assets/left_collape1.svg" /></button>
-                            </div>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/cookware"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        SOFAS
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/kitchen-tools"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        CHAIRS
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/knives"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        TABLES +DESKS
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/water-filtration"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        SHELVES
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/kitchen-table-linens"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        SIDEBOARD + CABINETS
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/organization-food-storage"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        KIDS + CHILDREN FURNITURE
+                                    </a>
+                                </li>
+
+
+                            </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <!-- Ratting -->
-
+                        <!-- Lighting -->
                         <button type="button" (click)="Ratting.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 ">Ratting <img
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                                (click)="getDismissReason('h')">LIGHTING</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
                         <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
-                            <div class="row w-100 m-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        8 Ranks
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        4 Ranks
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        2 Ranks
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        1 Rank
-                                    </label>
+                            <ul class="col-12 navbar-item text-light  flex-col">
+                                <div class="text-caps zoom mb-4">
+                                    <a href="/collections/kitchen">All LIGHTING</a>
                                 </div>
 
+                                <li class="text-caps zoom mb-1">
+                                    <a href="/collections/cookware" class="mb-1">
+                                        FLOOR LAMPS
+                                    </a>
+                                </li>
 
-                            </div>
+                                <li class="text-caps zoom mb-1">
+                                    <a href="/collections/kitchen-tools"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        CHANDELIERS
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom mb-1">
+                                    <a href="/collections/knives"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        cEILING LIGHTS
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom mb-1">
+                                    <a href="/collections/water-filtration"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        OUTDOOR LIGHTS
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
-                </ul>
+                    <li class="nav-item">
+                        <!-- OUTDOOR -->
+                        <button type="button" (click)="Ratting.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                                (click)="getDismissReason('h')">OUTDOOR</a> <img
+                                src="../../../assets/down_collapse.svg">
+                        </button>
+                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                            <ul class="col-12">
+                                <div class="zoom mb-4">
+                                    <a href="/collections/furniture">All Furniture</a>
+                                </div>
+                                <li class="zoom">
+                                    <a href="/collections/outdoor-furniture"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Outdoor Furniture
+                                    </a>
+                                </li>
+
+                                <li class="zoom">
+                                    <a href="/collections/outdoor-lights"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Outdoor Lights
+                                    </a>
+                                </li>
+
+                                <li class="zoom">
+                                    <a href="/collections/outdoor-accessories"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Outdoor Accessories
+                                    </a>
+                                </li>
+
+                                <li class="zoom">
+                                    <a href="/collections/outdoor-games-recreation"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Outdoor Games + Recreation
+                                    </a>
+                                </li>
+
+                                <li class="zoom">
+                                    <a href="/collections/firepits-grills"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Fire Pits + Grills
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- DINNING -->
+                        <button type="button" (click)="Ratting.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                                (click)="getDismissReason('h')">DINNING</a> <img
+                                src="../../../assets/down_collapse.svg">
+                        </button>
+                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                            <ul class="col-12 mr-5">
+
+                                <div class="text-caps zoom mb-4">
+                                    <a href="/collections/dining">All Dining</a>
+                                </div>
+
+                                <li class="text-caps text-wide zoom">
+                                    <a href="/collections/dinnerware"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Dinnerware
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/serveware"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Serveware
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/drinkware"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Drinkware
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/barware"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Barware
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/coffee-tea"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Coffee + Tea
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/carafes-pitchers"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Carafes + Pitchers
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/wine-champagne-glasses"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Wine + Champagne Glasses
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/beer-cocktail-glasses"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Beer + Cocktail Glasses
+                                    </a>
+                                </li>
+
+                                <li class="text-caps text-wide text-inverted zoom">
+                                    <a href="/collections/kitchen-table-linens"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Kitchen + Table Linens
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <!-- KITCHEN -->
+                        <button type="button" (click)="Ratting.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                                (click)="getDismissReason('h')">KITCHEN</a> <img
+                                src="../../../assets/down_collapse.svg">
+                        </button>
+                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                            <ul class="col-12 mb-4">
+                                <div class="text-caps zoom">
+                                    <a href="/collections/kitchen">All Kitchen</a>
+                                </div>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/cookware"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Cookware
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/kitchen-tools"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Kitchen Tools
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/knives"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Knives
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/water-filtration"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Water Filtration
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/kitchen-table-linens"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Kitchen + Table Linens
+                                    </a>
+                                </li>
+
+                                <li class="text-caps zoom">
+                                    <a href="/collections/organization-food-storage"
+                                        class="block padding-top-bottom--down-2 hover-text-lighter wrap">
+                                        Organization + Food Storage
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </div>
             </div>
         </div>
 

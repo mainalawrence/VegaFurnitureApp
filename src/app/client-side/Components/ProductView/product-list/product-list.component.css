@@ -42,7 +42,7 @@ a {
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 25%);
-        grid-auto-rows: 30%;
+        grid-auto-rows:auto;
         gap: 1%;
         background-color: white;
         border-radius: 10px;

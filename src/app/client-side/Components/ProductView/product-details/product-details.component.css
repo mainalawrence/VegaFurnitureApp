@@ -66,3 +66,11 @@ border-width: 0px;
       }
 
    }
+
+
+      /*tablet*/
+      @media only screen and (min-width: 460px) and (max-width: 810px) {
+         .ma-sm {
+               margin-top:5%;
+            }
+      }
