@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbOffcanvas} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-phone-menu',
@@ -10,8 +11,10 @@ export class PhoneMenuComponent implements OnInit {
   CategoryCollapsed=true
   PriceCollapsed=true
   
-  constructor() { }
+  constructor(private offcanvasService: NgbOffcanvas) { }
   ngOnInit(): void {
   }
-
+     getDismissReason(reason: any) {
+       this.offcanvasService.dismiss()
+  }
 }

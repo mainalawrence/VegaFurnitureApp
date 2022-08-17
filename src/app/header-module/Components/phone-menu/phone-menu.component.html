@@ -1,15 +1,15 @@
 <div class="container-fluid w-100">
     <div class="offcanvas-header "  style="background-color:#32cf9d;">
         <h5 class="offcanvas-title">Menu</h5>
-        <button>Close</button>
+        <button type="button" class="btn-close" aria-label="Close" (click)="this.getDismissReason('h')"></button>
     </div>
     <div class="offcanvas-body">
         <div class="container-fluid bg-light">
             <div class="row">
                 <ul class="nav flex-column">
                     <li class="nav-item mb-4">
-                        <button (click)="Category.toggle()" type="button"
-                            class="btn d-flex justify-content-between align-item-center w-100 ">Category <img
+                        <button (click)="Category.toggle();" type="button"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a (click)="getDismissReason('h')">Category</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
                         <!-- Category -->

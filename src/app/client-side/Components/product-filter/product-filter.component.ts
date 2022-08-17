@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbOffcanvas, OffcanvasDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-filter',
@@ -9,10 +10,18 @@ export class ProductFilterComponent implements OnInit {
     RatingCollapsed=true
     CategoryCollapsed=true
     PriceCollapsed=true
-  constructor() { }
+  constructor(private offcanvasService: NgbOffcanvas) { }
 
   ngOnInit(): void {
     
+  }
+  open(content:any) {
+    this.offcanvasService.open(content, {ariaLabelledBy: 'offcanvas-basic-title'}).result.then((result) => {
+      
+    });
+  }
+     getDismissReason(reason: any) {
+       this.offcanvasService.dismiss()
   }
 
 }

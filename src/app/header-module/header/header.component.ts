@@ -24,16 +24,15 @@ export class HeaderComponent implements OnInit {
     this.searchBarOpen=false;   
   }
 
-    @HostListener('window:resize', ['$event'])
-  onWindowResize() {
-     
-  }
   open(){
     const offcanvasRef = this.offcanvasService.open(ProductFilterComponent);
   }
 
   menuOpen(){
     const offcanvasRef = this.offcanvasService.open(PhoneMenuComponent);
+  }
+  close(){
+      const offcanvasRef = this.offcanvasService.dismiss(ProductFilterComponent);
   }
 
 
