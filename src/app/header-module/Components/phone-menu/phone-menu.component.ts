@@ -7,9 +7,14 @@ import {NgbOffcanvas} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./phone-menu.component.css']
 })
 export class PhoneMenuComponent implements OnInit {
-  RatingCollapsed=true
-  CategoryCollapsed=true
-  PriceCollapsed=true
+
+  art=true;
+  bedroom=true;
+  dinning=true;
+  kitchen=true;
+  lighting=true;
+  outdoor=true;
+  furniture=true;
   
   constructor(private offcanvasService: NgbOffcanvas) { }
   ngOnInit(): void {

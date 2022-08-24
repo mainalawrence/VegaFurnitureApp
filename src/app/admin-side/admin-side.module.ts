@@ -19,6 +19,7 @@ import { UpdateUsersComponent } from './Component/Users/update-users/update-user
 import { TrushUsersComponent } from './Component/Users/trush-users/trush-users.component';
 import { UsersTableComponent } from './Component/Users/users-table/users-table.component';
 import { ReportComponent } from './Component/Report/report/report.component';
+import { HeaderComponent } from './Component/header/header.component';
 
 const routes: Routes = [
   {
@@ -56,7 +57,8 @@ const routes: Routes = [
     TrushUsersComponent,
     UsersTableComponent,
     ReportComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    HeaderComponent
     
   ],
   imports: [
@@ -64,7 +66,7 @@ const routes: Routes = [
     CommonModule,
     NgbModule
   ],
-  bootstrap: [MainAdminComponent, SidenavComponent,UserComponent]
+  bootstrap: [MainAdminComponent, SidenavComponent,UserComponent,HeaderComponent]
   
 })
 export class AdminSideModule { }

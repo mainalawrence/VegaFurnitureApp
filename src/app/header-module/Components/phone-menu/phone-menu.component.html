@@ -7,14 +7,14 @@
         <div class="container-fluid bg-light">
             <div class="row">
                 <div class="nav flex-column W-100">
-                    <li class="nav-item mb-4">
-                        <button (click)="Category.toggle();" type="button"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                    <li class="nav-item ">
+                        <button (click)="bedroomdiv.toggle();" type="button"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a class="zoom text-dark"
                                 (click)="getDismissReason('h')">BEDROOM</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
                         <!-- BED ROOM -->
-                        <div #Category="ngbCollapse" [(ngbCollapse)]="CategoryCollapsed">
+                        <div #bedroomdiv="ngbCollapse" [(ngbCollapse)]="bedroom">
                             <ul class="col-12 bg-dark p-3">
                                 <div class="text-caps mb-4 zoom">
                                     <a href="/collections/furniture">All Furniture</a>
@@ -69,15 +69,15 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item mb-4">
-                        <button type="button" (click)="Price.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                    <li class="nav-item">
+                        <button type="button" (click)="furniturediv.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a class="zoom text-dark"
                                 (click)="getDismissReason('h')">FURNITURE</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
 
                         <!-- Furniture -->
-                        <div #Price="ngbCollapse" [(ngbCollapse)]="PriceCollapsed">
+                        <div #furniturediv="ngbCollapse" [(ngbCollapse)]="furniture">
                             <ul class="col-12 bg-dark ">
                                 <div class="mb-4 zoom">
                                     <a href="/collections/kitchen">All Furnitures </a>
@@ -131,12 +131,12 @@
                     </li>
                     <li class="nav-item">
                         <!-- Lighting -->
-                        <button type="button" (click)="Ratting.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                        <button type="button" (click)="lightingdiv.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a class="zoom text-dark"
                                 (click)="getDismissReason('h')">LIGHTING</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
-                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                        <div #lightingdiv="ngbCollapse" [(ngbCollapse)]="lighting">
                             <ul class="col-12 navbar-item text-light  flex-col">
                                 <div class="text-caps zoom mb-4">
                                     <a href="/collections/kitchen">All LIGHTING</a>
@@ -173,12 +173,12 @@
                     </li>
                     <li class="nav-item">
                         <!-- OUTDOOR -->
-                        <button type="button" (click)="Ratting.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                        <button type="button" (click)="outdoordiv.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a class="zoom text-dark"
                                 (click)="getDismissReason('h')">OUTDOOR</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
-                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                        <div #outdoordiv="ngbCollapse" [(ngbCollapse)]="outdoor">
                             <ul class="col-12">
                                 <div class="zoom mb-4">
                                     <a href="/collections/furniture">All Furniture</a>
@@ -224,12 +224,12 @@
 
                     <li class="nav-item">
                         <!-- DINNING -->
-                        <button type="button" (click)="Ratting.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                        <button type="button" (click)="dinningdiv.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a class="zoom text-dark"
                                 (click)="getDismissReason('h')">DINNING</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
-                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                        <div #dinningdiv="ngbCollapse" [(ngbCollapse)]="dinning">
                             <ul class="col-12 mr-5">
 
                                 <div class="text-caps zoom mb-4">
@@ -304,12 +304,12 @@
                     </li>
                     <li class="nav-item">
                         <!-- KITCHEN -->
-                        <button type="button" (click)="Ratting.toggle()"
-                            class="btn d-flex justify-content-between align-item-center w-100 "><a
+                        <button type="button" (click)="kitchendiv.toggle()"
+                            class="btn d-flex justify-content-between align-item-center w-100 "><a class="zoom text-dark"
                                 (click)="getDismissReason('h')">KITCHEN</a> <img
                                 src="../../../assets/down_collapse.svg">
                         </button>
-                        <div #Ratting="ngbCollapse" [(ngbCollapse)]="RatingCollapsed">
+                        <div #kitchendiv="ngbCollapse" [(ngbCollapse)]="kitchen">
                             <ul class="col-12 mb-4">
                                 <div class="text-caps zoom">
                                     <a href="/collections/kitchen">All Kitchen</a>
