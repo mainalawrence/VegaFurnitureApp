@@ -9,17 +9,16 @@ import { JwtInterceptor } from './authentication/Services/jwt.interceptor';
 import { ErrorComponent } from './Error.Component/error.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './Footer/footer/footer.component';
-import { AboutUsComponent } from './Footer/about-us/about-us.component';
-import { CustomerServiceComponent } from './Footer/customer-service/customer-service.component';
-import { PrivacyPolicyComponent } from './Footer/privacy-policy/privacy-policy.component';
-import { ContactUsComponent } from './Footer/contact-us/contact-us.component';
+import { FooterComponent } from './header-module/Footer/footer/footer.component';
+import { AboutUsComponent } from './header-module/Footer/about-us/about-us.component';
+import { CustomerServiceComponent } from './header-module/Footer/customer-service/customer-service.component';
+import { PrivacyPolicyComponent } from './header-module/Footer/privacy-policy/privacy-policy.component';
+import { ContactUsComponent } from './header-module/Footer/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    FooterComponent,
     AboutUsComponent,
     CustomerServiceComponent,
     PrivacyPolicyComponent,
@@ -44,6 +43,6 @@ import { ContactUsComponent } from './Footer/contact-us/contact-us.component';
     }
   ],
   bootstrap: [AppComponent,FooterComponent],
-  exports:[FooterComponent]
+  exports:[]
 })
 export class AppModule { }

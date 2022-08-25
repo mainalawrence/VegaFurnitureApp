@@ -12,6 +12,7 @@ import { KitchenComponent } from './Components/kitchen/kitchen.component';
 import { ArtComponent } from './Components/art/art.component';
 import { RouterModule } from '@angular/router';
 import { PhoneMenuComponent } from './Components/phone-menu/phone-menu.component';
+import { FooterComponent } from './Footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PhoneMenuComponent } from './Components/phone-menu/phone-menu.component
     DinningComponent,
     KitchenComponent,
     ArtComponent,
-    PhoneMenuComponent
+    PhoneMenuComponent,
+    FooterComponent
   ],
   imports: [
     NgbModule,
@@ -32,7 +34,7 @@ import { PhoneMenuComponent } from './Components/phone-menu/phone-menu.component
     CommonModule,
     RouterModule
   ],
-  bootstrap:[HeaderComponent],
-  exports:[HeaderComponent]
+  bootstrap:[HeaderComponent,FooterComponent],
+  exports:[HeaderComponent,FooterComponent]
 })
 export class HeaderModuleModule { } 
