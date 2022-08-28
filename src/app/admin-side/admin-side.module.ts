@@ -21,13 +21,19 @@ import { UsersTableComponent } from './Component/Users/users-table/users-table.c
 import { ReportComponent } from './Component/Report/report/report.component';
 import { HeaderComponent } from './Component/header/header.component';
 import { ProductHeaderComponent } from './Component/ProductComponents/product-header/product-header.component';
-
+import {ProductListComponent} from './Component/ProductComponents/product-list/product-list.component'
+import {ProductFormComponent} from './Component/ProductComponents/product-form/product-form.component'
+import {ProductviewComponent} from './Component/ProductComponents/productview/productview.component'
 const routes: Routes = [
   {
     path: '', component: MainAdminComponent, children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'products', component: ProductsComponent },
+      { path: 'products', component: ProductsComponent,children:[
+        {path:'',component:ProductListComponent},
+        {path:'/new',component:ProductFormComponent},
+        {path:'/trush',component:ProductviewComponent}
+      ]},
       { path: 'statistics', component: StatisticsComponent },
       { path: 'coupens', component: CoupensComponent },
       { path: 'pages', component: PagesComponent },
