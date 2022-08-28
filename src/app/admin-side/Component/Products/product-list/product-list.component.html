@@ -1,0 +1,33 @@
+<table class="table table-striped table-sm">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Type</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let product of pagesProducts">
+        <tr>
+            <td>{{product._id}}</td>
+            <td>{{product.firstName}}</td>
+            <td>{{product.lastName}}</td>
+            <td>{{product.email}}</td>
+            <td>{{product.role}}</td>
+            <td class="d-flex justify-content-between">
+                
+                <img (click)="deleteProduct(product.id)" class="zoom" style="width: 35%;"
+                    src="../../../../../assets/delete.svg">
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>
+<div *ngIf="collectionSize>pageSize" class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+        (pageChange)="refreshUsers()">
+    </ngb-pagination>
+</div>

@@ -1,0 +1,168 @@
+<form [formGroup]="ProductForm" (ngSubmit)="onSubmit($event)">
+
+    <div [ngSwitch]="page">
+        <!-- basic product information -->
+        <div *ngSwitchCase="1" class="form-group">
+            <h4>Product Details</h4>
+            <div class="form-group">
+                <label class="form-label">Product Name</label>
+                <input id="reg" type="text" [value]="getName()?.value" formControlName="name" class="form-control"
+                    placeholder="Enter Product Name..." />
+                <div *ngIf="this.getName()?.touched && getName()?.invalid" class="alert alert-danger">
+                    Invalid Product Name
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Product Cost</label>
+                <input id="cost" type="number" [value]="getCost()?.value" formControlName="cost" class="form-control"
+                    placeholder="Enter Product Cost..." />
+                <div *ngIf="getCost()?.invalid && getCost()?.touched" class="alert alert-danger">
+                    Invalid Cost
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Product Brand</label>
+                <input id="brand" type="text" [value]="getBrand()?.value" formControlName="brand" class="form-control"
+                    placeholder="Enter brand..." />
+                <div *ngIf="getBrand()?.value===null && getBrand()?.touched" class="alert alert-danger">
+                    Invalid Brand
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label"> Product Description</label>
+                <input id="description" type="text" [value]="getDescription()?.value" formControlName="description"
+                    class="form-control" placeholder="Enter description..." />
+                <div *ngIf="getDescription()?.invalid && getDescription()?.touched" class="alert alert-danger">
+                    Invalid Description
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Product Category</label>
+                <select id="type" formControlName="type" (select)="getType()?.value"
+                    class="form-select form-control bg-light">
+                    <option class="text-light" *ngFor="let type of Types">{{type}}</option>
+                </select>
+                <div *ngIf="getType()?.invalid && getType()?.touched" class="alert alert-danger">
+                    Invalid Type
+                </div>
+            </div>
+            <div class="form-group">
+            </div>
+        </div>
+        <!-- Specification -->
+        <div *ngSwitchCase='2' class="form-group">
+            <h4>Add Product Specifications</h4>
+            <div class="form-group" formArrayName="Specifications">
+                <button class="btn  " (click)="this.addSpecification()">Add Specifications</button>
+
+                <div class="form-group" *ngFor="let specification of getControls() ;let i= index">
+                    <div class="form-group">
+                        <label class="form-label">Products Specifications</label>
+                        <div class="form-group flex-row ">
+                            <input id="Specifications" [formControlName]="i" type="text" class="form-control"
+                                placeholder="Enter Specifications" />
+                            <button class="btn btn-danger " (click)="this.removeSpecification(i)">X</button>
+                        </div>
+                        <div *ngIf=" getSpecifications()?.invalid &&  getSpecifications()?.touched"
+                            class="alert alert-danger">
+                            Invalid Specifications
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- features form array -->
+        <div *ngSwitchCase="3" class="form-group">
+            <h4>Add Product Features Details</h4>
+            <div class="form-group" formArrayName="Features">
+                <button class="btn  " (click)="this.addFeature()">Add Feature</button>
+                <div class="form-group" *ngFor="let feature of this.getFeatures().controls; let i=index">
+                    <div class="form-group">
+                        <label class="form-label">Products Features</label>
+                        <div class="form-group flex-row ">
+                            <input id="feature" type="text" [formControlName]="i" class="form-control"
+                                placeholder="Enter feature" />
+                            <button class="btn btn-danger " (click)="this.removeFeature(i)">X</button>
+                        </div>
+
+                        <div *ngIf=" getFeatures()?.invalid &&  getFeatures()?.touched" class="alert alert-danger">
+                            Invalid Features
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- images -->
+        <div *ngSwitchCase="4" class="form-group">
+            <h4>Product Imaages</h4>
+            <div formGroupName="images" class="form-group">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-label">Image 1</label>
+                        <div class="form-group flex-row ">
+                            <input id="feature" type="file" multiple (change)="HandleFileImageChange($event)" [formControlName]="1" class="form-control" />
+                        </div>
+                        <div *ngIf=" getImages()?.invalid &&  getImages()?.touched" class="alert alert-danger">
+                            Invalid Specifications
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-label">Image 2</label>
+                        <div class="form-group flex-row ">
+                            <input id="feature" type="file" multiple (change)="HandleFileImageChange($event)" [formControlName]="2"
+                                class="form-control" />
+                        </div>
+                        <div *ngIf=" getImages()?.invalid &&  getImages()?.touched" class="alert alert-danger">
+                            Invalid Specifications
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-label">Image 3</label>
+                        <div class="form-group flex-row ">
+                            <input id="feature" type="file" multiple (change)="HandleFileImageChange($event)" [formControlName]="3"
+                                class="form-control" />
+                        </div>
+                        <div *ngIf=" getImages()?.invalid &&  getImages()?.touched" class="alert alert-danger">
+                            Invalid Specifications
+                        </div>
+                    </div>
+                </div>
+
+                <!-- id="feature" type="file" multiple (change)="HandleFileImageChange($event)" -->
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-label">Image 4</label>
+                        <div class="form-group flex-row ">
+                            <input id="feature" type="file" multiple (change)="HandleFileImageChange($event)" [formControlName]="4"
+                                class="form-control" />
+                        </div>
+                        <div *ngIf=" getImages()?.invalid &&  getImages()?.touched" class="alert alert-danger">
+                            Invalid Specifications
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div *ngSwitchDefault>
+            Default
+        </div>
+
+    </div>
+    <div class=" d-flex flex-row justify-content-evenly form-group  align-items-center">
+        <input (click)="prevPage()" [disabled]="this.page<=1" type="button" value="Prev" class='btn btn-sucessfull' />
+
+        <input *ngIf="this.page>=4" [disabled]="!ProductForm.valid" type="submit" value="Submit"
+            class='btn btn-success ' />
+        <input (click)="nextPage()" [disabled]="this.page>=4" type="button" value="Next" class='btn ' />
+    </div>
+</form>

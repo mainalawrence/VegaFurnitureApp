@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsComponent } from './Component/products/products.component';
+import { ProductsComponent } from './Component/ProductComponents/products/products.component';
 import { StatisticsComponent } from './Component/Report/statistics/statistics.component';
 import { PagesComponent } from './Component/pages/pages.component';
 import { SettingsComponent } from './Component/settings/settings.component';
@@ -20,6 +20,7 @@ import { TrushUsersComponent } from './Component/Users/trush-users/trush-users.c
 import { UsersTableComponent } from './Component/Users/users-table/users-table.component';
 import { ReportComponent } from './Component/Report/report/report.component';
 import { HeaderComponent } from './Component/header/header.component';
+import { ProductHeaderComponent } from './Component/ProductComponents/product-header/product-header.component';
 
 const routes: Routes = [
   {
@@ -58,7 +59,8 @@ const routes: Routes = [
     UsersTableComponent,
     ReportComponent,
     StatisticsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductHeaderComponent
     
   ],
   imports: [
