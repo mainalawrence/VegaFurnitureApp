@@ -13,11 +13,11 @@ export class ProductFormComponent implements OnInit {
 
   aimage:any[]=[]
 
-  page:number=1;
+  page=1;
 
   ProductForm!:FormGroup;
 
-  Types=["____Select___","Laptops","Computers","Phones","Acessories"]
+  Types=["____Select___","Art","Kitchen","Outdoors","Bedroom","Furniture"]
 
   constructor(private fb:FormBuilder,private productStateServices:ProductService) { }
   ngOnInit(){

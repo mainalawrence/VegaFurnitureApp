@@ -24,6 +24,7 @@ import { ProductHeaderComponent } from './Component/ProductComponents/product-he
 import {ProductListComponent} from './Component/ProductComponents/product-list/product-list.component'
 import {ProductFormComponent} from './Component/ProductComponents/product-form/product-form.component'
 import {ProductviewComponent} from './Component/ProductComponents/productview/productview.component'
+import { ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
   {
     path: '', component: MainAdminComponent, children: [
@@ -70,9 +71,10 @@ const routes: Routes = [
     
   ],
   imports: [
-    RouterModule.forChild(routes),
     CommonModule,
-    NgbModule
+    NgModule,
+    RouterModule.forChild(routes)
+   
   ],
   bootstrap: [MainAdminComponent, SidenavComponent,UserComponent,HeaderComponent]
   
