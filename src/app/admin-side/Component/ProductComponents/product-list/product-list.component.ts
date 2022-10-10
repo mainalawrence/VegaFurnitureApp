@@ -8,6 +8,7 @@ import { ProductService } from '../../../Services/product.service';
 })
 export class ProductListComponent implements OnInit {
   Products:any[]=[]
+  
   pagesProducts:any;
   page = 1;
   pageSize =10;

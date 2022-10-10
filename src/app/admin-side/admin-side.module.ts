@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './Component/ProductComponents/products/products.component';
@@ -21,19 +21,24 @@ import { UsersTableComponent } from './Component/Users/users-table/users-table.c
 import { ReportComponent } from './Component/Report/report/report.component';
 import { HeaderComponent } from './Component/header/header.component';
 import { ProductHeaderComponent } from './Component/ProductComponents/product-header/product-header.component';
-import {ProductListComponent} from './Component/ProductComponents/product-list/product-list.component'
-import {ProductFormComponent} from './Component/ProductComponents/product-form/product-form.component'
-import {ProductviewComponent} from './Component/ProductComponents/productview/productview.component'
+import { ProductListComponent } from './Component/ProductComponents/product-list/product-list.component'
+
+import { ProductviewComponent } from './Component/ProductComponents/productview/productview.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewProductFormComponent } from './Component/ProductComponents/new-product-form/new-product-form.component';
+
 const routes: Routes = [
   {
     path: '', component: MainAdminComponent, children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'products', component: ProductsComponent,children:[
-        {path:'',component:ProductListComponent},
-        {path:'/new',component:ProductFormComponent},
-        {path:'/trush',component:ProductviewComponent}
-      ]},
+      {
+        path: 'products', component: ProductsComponent, children: [
+          { path: '', component: ProductListComponent },
+          { path: 'new', component: NewProductFormComponent },
+          { path: 'trush', component: ProductviewComponent }
+        ]
+      },
       { path: 'statistics', component: StatisticsComponent },
       { path: 'coupens', component: CoupensComponent },
       { path: 'pages', component: PagesComponent },
@@ -42,6 +47,7 @@ const routes: Routes = [
       { path: 'journal', component: JournalComponent },
       { path: 'users', component: UserComponent },
       { path: 'orders', component: OrdersComponent }
+
     ]
   }
 ];
@@ -66,16 +72,18 @@ const routes: Routes = [
     ReportComponent,
     StatisticsComponent,
     HeaderComponent,
-    ProductHeaderComponent
-    
+    ProductHeaderComponent,
+    NewProductFormComponent
+
   ],
   imports: [
+    NgbModule,
+    RouterModule.forChild(routes),
     CommonModule,
-    NgModule,
-    RouterModule.forChild(routes)
-   
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  bootstrap: [MainAdminComponent, SidenavComponent,UserComponent,HeaderComponent]
-  
+  bootstrap: [MainAdminComponent, NewProductFormComponent]
+
 })
 export class AdminSideModule { }

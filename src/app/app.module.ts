@@ -14,6 +14,7 @@ import { AboutUsComponent } from './header-module/Footer/about-us/about-us.compo
 import { CustomerServiceComponent } from './header-module/Footer/customer-service/customer-service.component';
 import { PrivacyPolicyComponent } from './header-module/Footer/privacy-policy/privacy-policy.component';
 import { ContactUsComponent } from './header-module/Footer/contact-us/contact-us.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,21 +28,22 @@ import { ContactUsComponent } from './header-module/Footer/contact-us/contact-us
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FormsModule,
-    ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [
-      {
+    {
       provide: HTTP_INTERCEPTORS,
       useClass: JwtInterceptor,
       multi: true
     }
   ],
-  bootstrap: [AppComponent,FooterComponent],
-  exports:[]
+  bootstrap: [AppComponent, FooterComponent],
+  exports: []
 })
 export class AppModule { }
