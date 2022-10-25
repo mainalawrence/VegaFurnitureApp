@@ -6,11 +6,11 @@ import { ProductComponent } from './Components/ProductView/product/product.compo
 import { ProductFilterComponent } from './Components/product-filter/product-filter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './Components/ProductView/product-details/product-details.component';
-import { FormsModule } from '@angular/forms';
 import { CategoryComponent } from './Components/category/category.component';
 import { CategoryListComponent } from './Components/category-list/category-list.component';
 import { HeaderModuleModule } from '../header-module/header-module.module';
 import { CartModule } from '../cart/cart.module';
+
 
 
 
@@ -37,7 +37,7 @@ import { CartModule } from '../cart/cart.module';
         {path:':id',component:ProductDetailsComponent}
       ]}
     ]),
-    HeaderModuleModule
+    HeaderModuleModule,
   ],
   bootstrap:[ProductFilterComponent]
 })

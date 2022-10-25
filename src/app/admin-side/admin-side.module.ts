@@ -21,11 +21,11 @@ import { UsersTableComponent } from './Component/Users/users-table/users-table.c
 import { ReportComponent } from './Component/Report/report/report.component';
 import { HeaderComponent } from './Component/header/header.component';
 import { ProductHeaderComponent } from './Component/ProductComponents/product-header/product-header.component';
-import { ProductListComponent } from './Component/ProductComponents/product-list/product-list.component'
 
 import { ProductviewComponent } from './Component/ProductComponents/productview/productview.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewProductFormComponent } from './Component/ProductComponents/new-product-form/new-product-form.component';
+import { ProductListComponent } from './Component/ProductComponents/product-list/product-list.component';
 
 const routes: Routes = [
   {
@@ -73,8 +73,8 @@ const routes: Routes = [
     StatisticsComponent,
     HeaderComponent,
     ProductHeaderComponent,
-    NewProductFormComponent
-
+    NewProductFormComponent,
+    ProductListComponent
   ],
   imports: [
     NgbModule,

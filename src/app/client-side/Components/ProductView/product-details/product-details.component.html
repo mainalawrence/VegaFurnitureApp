@@ -1,4 +1,7 @@
 <app-header></app-header>
+<ngb-alert (closed)="successMessage=false" *ngIf="successMessage" type="success">successfully added to the cart
+</ngb-alert>
+
 <div class="container mt-2">
         <div class="row d-lg-flex justify-content-lg-center pl-lg-5">
             <div class="ml-5 col-md-7 col-sm-8 card">

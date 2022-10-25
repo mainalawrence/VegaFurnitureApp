@@ -12,7 +12,7 @@ export class ProductDetailsComponent implements OnInit {
   Product:any={name:'Chai'};
   id:any;
   images:string[] = [];
-
+  successMessage=false;
   ProductAmount:number=1;
 
   constructor(
@@ -39,7 +39,9 @@ export class ProductDetailsComponent implements OnInit {
     // })
   }
  public addToCart(){
+   this.successMessage = true;
     this.cartServices.addProductCart(this.Product)
+ 
   }
 
   AddproductAMount(){

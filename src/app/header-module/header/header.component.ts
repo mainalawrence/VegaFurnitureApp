@@ -10,29 +10,43 @@ import { PhoneMenuComponent } from '../Components/phone-menu/phone-menu.componen
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- 
-  index=[10,1,1,1];
 
-  public navbarCollapse=true;
-  
-  public searchBarOpen!:boolean;
+  index = [10, 1, 1, 1];
 
-   constructor(private offcanvasService: NgbOffcanvas,public router:Router) {}
+  public navbarCollapse = true;
+
+  public searchBarOpen!: boolean;
+
+  constructor(private offcanvasService: NgbOffcanvas, public router: Router) { }
 
 
   ngOnInit(): void {
-    this.searchBarOpen=false;   
+    this.searchBarOpen = false;
   }
 
-  open(){
+  open() {
     const offcanvasRef = this.offcanvasService.open(ProductFilterComponent);
   }
 
-  menuOpen(){
+  menuOpen() {
     const offcanvasRef = this.offcanvasService.open(PhoneMenuComponent);
   }
-  close(){
-      const offcanvasRef = this.offcanvasService.dismiss(ProductFilterComponent);
+  close() {
+    const offcanvasRef = this.offcanvasService.dismiss(ProductFilterComponent);
+  }
+  logedin() {
+    if (localStorage.getItem("vega") == null) {
+      return false;
+    }
+    return true;
+  }
+  logout() {
+    localStorage.removeItem('vega');
+  }
+  getName() {
+    let data = JSON.parse("" + localStorage?.getItem("vega"))
+    console.log(data);
+    return data.name;
   }
 
 

@@ -25,15 +25,15 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    return !!localStorage.getItem('bright-tech-token')
+    return !!localStorage.getItem('vega')
   }
 
   getToken() {
-    return localStorage.getItem('bright-tech-token')
+    return localStorage.getItem('vega')
   }
 
   logoutUser() {
-    localStorage.removeItem('bright-tech-token');
+    localStorage.removeItem('vega');
     this.router.navigate(["/auth/login"])
   }
   

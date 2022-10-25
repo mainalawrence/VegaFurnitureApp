@@ -7,17 +7,18 @@ import { ProductService } from '../../../Services/product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  Products:any[]=[]
-  
-  pagesProducts:any;
+
+  Products: any[] = []
+
+  pagesProducts: any;
   page = 1;
-  pageSize =10;
+  pageSize = 10;
   collectionSize = this.Products.length;
-  constructor(private productService:ProductService) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(res=>{
-      this.Products=res
+    this.productService.getProducts().subscribe(res => {
+      this.Products = res
     })
     this.collectionSize = this.Products.length;
     this.refreshUsers();
@@ -25,20 +26,20 @@ export class ProductListComponent implements OnInit {
 
 
   refreshUsers() {
-    this.pagesProducts =this.Products.map((user:any,i:any)=> ({_id: i + 1, ...user})).slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+    this.pagesProducts = this.Products.map((user: any, i: any) => ({ _id: i + 1, ...user })).slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
 
 
-  updateProduct(id:string){
-   console.log(this.Products.filter((user:any)=>{
-     if(user.id===id) return user;
-     return;
-   })[0]);
-   
-    
+  updateProduct(id: string) {
+    console.log(this.Products.filter((user: any) => {
+      if (user.id === id) return user;
+      return;
+    })[0]);
+
+
   }
-  deleteProduct(id:string){
-    this.productService.trushedProduct(id).subscribe((res)=>{
+  deleteProduct(id: string) {
+    this.productService.trushedProduct(id).subscribe((res) => {
       console.log(res);
     })
 

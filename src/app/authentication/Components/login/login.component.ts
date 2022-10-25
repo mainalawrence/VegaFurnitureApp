@@ -10,6 +10,7 @@ import { AuthService } from '../../Services/auth.service';
 })
 export class LoginComponent implements OnInit {
 loginForm!:FormGroup;
+  successMessage: boolean = false;
 
   constructor(private fb:FormBuilder, private authService:AuthService, private router: Router) { }
 
@@ -26,8 +27,7 @@ loginForm!:FormGroup;
   this.authService.loginUser(this.loginForm.value).subscribe(
       (res) => {
         console.log(res);
-        
-        localStorage.setItem('bright-tech-token',res.token)
+        localStorage.setItem('vega',JSON.stringify({name:res.name,token:res.token,uid:res.uid}));
         this.authService.setadminuser(res.role)
         if(res.role===0){
         this.router.navigate(["/"])
@@ -40,6 +40,7 @@ loginForm!:FormGroup;
         else{
         this.router.navigate(["/auth/login"])
         }
+      this.successMessage=true;
       },
       (error) => {
         console.log(error.error);

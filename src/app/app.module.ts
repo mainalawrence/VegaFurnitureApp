@@ -43,7 +43,7 @@ import { RouterModule } from '@angular/router';
       multi: true
     }
   ],
-  bootstrap: [AppComponent, FooterComponent],
+  bootstrap: [AppComponent],
   exports: []
 })
 export class AppModule { }

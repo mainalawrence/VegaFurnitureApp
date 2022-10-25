@@ -1,4 +1,4 @@
-<table class="table table-striped table-sm">
+<table class="table table-striped table-sm p-4">
     <thead>
         <tr>
             <th scope="col">id</th>
@@ -17,7 +17,6 @@
             <td>{{product.email}}</td>
             <td>{{product.role}}</td>
             <td class="d-flex justify-content-between">
-
                 <img (click)="deleteProduct(product.id)" class="zoom" style="width: 35%;"
                     src="../../../../../assets/delete.svg">
             </td>
@@ -27,6 +26,7 @@
 
 </table>
 <div *ngIf="collectionSize>pageSize" class="d-flex justify-content-between p-2">
-    <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshUsers()"> -->
-    <!-- </ngb-pagination> -->
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+        (pageChange)="refreshUsers()">
+    </ngb-pagination>
 </div>
