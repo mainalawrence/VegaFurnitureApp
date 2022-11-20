@@ -15,8 +15,8 @@ export class ProductStateService {
   }
 
   getProducts() {
-  
-    return this.http.get<any>("http://localhost:4000/api/products");
+
+    return this.http.get<any>("http://192.168.43.32:4000/api/products");
   }
   getProduct(id: string) {
     return this.http.get<any>("http://localhost:4000/api/products/" + id)
