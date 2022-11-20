@@ -10,12 +10,13 @@ export class ProductStateService {
   Products: any[] = [];
   constructor(private http: HttpClient, private router: Router) {
     this.getProducts().subscribe(res => {
+      console.log("this is called");
+
       this.Products = res;
     });
   }
 
   getProducts() {
-
     return this.http.get<any>("http://192.168.43.32:4000/api/products");
   }
   getProduct(id: string) {
