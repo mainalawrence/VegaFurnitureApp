@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductStateService } from 'src/app/client-side/Services/product-state.service';
 
 @Component({
   selector: 'app-product-list',
@@ -6,21 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  Products:any[]=[1,2,2,2,3,4,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,4]
-  
+  Products: any[] = [];
+
   //Pagination
-  pagesProducts:any;
+  pagesProducts: any;
   page = 1;
-  pageSize =10;
+  pageSize = 10;
   collectionSize = this.Products.length;
-  
-  constructor() { }
+
+  constructor(private productService: ProductStateService) { }
 
   ngOnInit(): void {
 
+    this.productService.getProducts().subscribe(res => {
+      this.Products = res;
+    },
+    )
   }
-    refreshUsers() {
-    this.pagesProducts =this.Products.map((user:any,i:any)=> ({_id: i + 1, ...user})).slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  refreshUsers() {
+    this.pagesProducts = this.Products.map((user: any, i: any) => ({ _id: i + 1, ...user })).slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
 
 }

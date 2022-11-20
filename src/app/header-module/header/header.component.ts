@@ -44,8 +44,11 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('vega');
   }
   getName() {
-    let data = JSON.parse("" + localStorage?.getItem("vega"))
-    console.log(data);
+    let data = JSON.parse(""+ localStorage?.getItem("vega"))
+    if(data==null){
+      return "";
+    }
+    
     return data.name;
   }
 

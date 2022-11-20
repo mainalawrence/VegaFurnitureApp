@@ -1,8 +1,8 @@
 <div class="c-card">
     <div class="body d-flex justify-content-center align-item-center p-4 container-fluid">
      
-        <a [routerLink]="['/products',product]">
-            <img class="img-fluid" src="../../../../../assets/12.png" />
+        <a [routerLink]="['/products',product.uid]">
+            <img class="img-fluid" src='{{url}}'  />
         </a>
     <!-- hover -->
 
@@ -45,10 +45,10 @@
 
 
     </div>
-    <a [routerLink]="['/products',product]">
+    <a [routerLink]="['/products',product.uid]">
     <div class="m-l-2 p-4">
-        <p>Plastic Chair</p>
-        <p><b>Ksh</b>1500.00</p>
+        <p>{{product.name}}</p>
+        <p>{{product.cost}}</p>
     </div>
         </a>
 </div>
