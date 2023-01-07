@@ -58,7 +58,6 @@ export class ProductDetailsComponent implements OnInit {
   public addToCart() {
     this.successMessage = true;
     this.cartServices.addProductCart(this.Product)
-
   }
 
   AddproductAMount() {

@@ -22,26 +22,26 @@
             <div class="product">
                 <div class="action">
                     <div class="image-name ">
-                        <img src='{{product.image}}' alt="{{product.name}}">
+                        <img src='{{product.pictures}}' alt="{{product.name}}">
                         <h6> {{product.brand}}</h6>
                     </div>
                     <div class="price">
                         <b>Cost</b>
-                        <h4>Ksh: {{product.price}}</h4>
+                        <h4>{{product.cost}}</h4>
                         <b>Subtotal</b>
-                        <h4>Ksh: {{product.subtotal}}</h4>
+                        <h4>{{product.subtotal}}</h4>
                     </div>
                 </div>
                 <div class="action">
                     <div class="remove">
-                        <button (click)="cartservice.removeProductCart(product.id)" class="zoom btn "> <img
+                        <button (click)="cartservice.removeProductCart(product.uid)" class="zoom btn "> <img
                                 src="../../../assets/delete.svg" alt="delete">REMOVE</button>
                     </div>
                     <div class="add-sub">
-                        <button (click)="cartservice.reduceProductQuantityCart(product.id)"
+                        <button (click)="cartservice.reduceProductQuantityCart(product.uid)"
                             class="btn sub  zoom-out"><img src="../../../assets/sub.svg" alt=""></button>
                         <label>{{product.quantity}}</label>
-                        <button (click)="cartservice.addProductQuantityCart(product.id)" class="btn add zoom-out"><img
+                        <button (click)="cartservice.addProductQuantityCart(product.uid)" class="btn add zoom-out"><img
                                 src="../../../assets/add.svg" alt=""></button>
                     </div>
                 </div>
