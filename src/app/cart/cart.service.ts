@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class CartService {
-  Total: number = 0;
+  Total = Number(0.0);
   products: any[] = []
 
   constructor(private http: HttpClient,) {
@@ -52,9 +52,9 @@ export class CartService {
     this.products.map(product => {
       if (id === product.uid) {
         product.quantity++;
-        product.subtotal = parseFloat(product.cost.split("h")[1]) * parseInt(product.quantity) as Number
-        let test = product.cost.split("h")[1].split().join();
-        console.log(test);
+        let CostParsed = (product.cost.split("h")[1].split().join()).replace(',', '');
+        product.subtotal = (CostParsed * parseInt(product.quantity) as Number).toFixed(2)
+
 
       }
 
@@ -64,9 +64,10 @@ export class CartService {
 
   TotolPrice() {
     //THIS IS IT
-    this.Total = 0;
+    this.Total = 0.0;
     this.products.map(product => {
-      this.Total += product.subtotal;
+      let CostParsed = product.subtotal.replace("Ksh", '').replace(',', '');
+      this.Total += Number(CostParsed);
     })
   }
 

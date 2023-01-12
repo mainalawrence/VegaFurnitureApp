@@ -1,0 +1,25 @@
+  .mpesa{
+      width: 12%;
+  }
+  .btn-mpesa{
+    padding: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 166, 0, 0.753);
+
+  }
+  .btn{
+    background-color: orange;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 3%;
+}
+.btn:hover{
+  opacity: 80%;
+}

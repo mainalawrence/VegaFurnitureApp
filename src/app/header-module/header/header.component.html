@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="">
-                    <p>Vega'sLane</p>
+                    <h2 routerLink="/">Vega'sLane</h2>
                 </div>
                 <div class=" align-items-center">
                     <button (click)="Category.toggle()" style="outline: none !important;outline-width: 0px !important;"
@@ -117,23 +117,25 @@
 
                     <div class="row w-100  t-1  bg-dangerr m-l-5">
                         <div class="d-flex  m-1 p-3 ">
-                        
-                                <i  (click)="searchBarOpen=!searchBarOpen" class="bi bi-search ml-5 mr-3 icon"></i>
-                            <i ngbPopover="filter Products" triggers="mouseenter:mouseleave" (click)="open()" class="bi bi-filter mr-3"></i>
-                                <i ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart" class="bi bi-cart mr-3 "></i>
-                                <i *ngIf="!logedin()" ngbPopover="signin/signup" triggers="mouseenter:mouseleave" routerLink="/auth/login" class="bi bi-person-plus-fill"></i>
-                                
-                                <a class="" aria-expanded="false">
-                                    <span class="mr-1 text-white">{{getName()}}</span>
-                                    <img class="img-profile rounded-circle"
-                                        src="../../../../assets/img/undraw_profile.svg">
-                                </a>
-                                
-                                <span *ngIf="logedin()" class="" tabindex="0" data-bs-toggle="popover"
-                                    data-bs-trigger="hover focus" data-bs-content="Disabled popover">
-                                    <button popoverTitle="Pop title" routerLink="/products" (click)="logout()"
-                                        class="btn zoom">Logout</button>
-                                </span>
+
+                            <i (click)="searchBarOpen=!searchBarOpen" class="bi bi-search ml-5 mr-3 icon"></i>
+                            <i ngbPopover="filter Products" triggers="mouseenter:mouseleave" (click)="open()"
+                                class="bi bi-filter mr-3"></i>
+                            <i ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart"
+                                class="bi bi-cart mr-3 "></i>
+                            <i *ngIf="!logedin()" ngbPopover="signin/signup" triggers="mouseenter:mouseleave"
+                                routerLink="/auth/login" class="bi bi-person-plus-fill"></i>
+
+                            <a class="" aria-expanded="false">
+                                <span class="mr-1 text-white">{{getName()}}</span>
+                                <img class="img-profile rounded-circle" src="../../../../assets/img/undraw_profile.svg">
+                            </a>
+
+                            <span *ngIf="logedin()" class="" tabindex="0" data-bs-toggle="popover"
+                                data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+                                <button popoverTitle="Pop title" routerLink="/products" (click)="logout()"
+                                    class="btn zoom">Logout</button>
+                            </span>
 
                         </div>
                         <div *ngIf="searchBarOpen" class="form center col-sm mt-3">

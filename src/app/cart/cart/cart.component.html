@@ -21,15 +21,15 @@
             <hr>
             <div class="product">
                 <div class="action">
-                    <div class="image-name ">
+                    <div class="image-name">
                         <img src='{{product.pictures}}' alt="{{product.name}}">
                         <h6> {{product.brand}}</h6>
                     </div>
                     <div class="price">
                         <b>Cost</b>
-                        <h4>{{product.cost}}</h4>
+                        <h4><b>{{product.cost}}</b></h4>
                         <b>Subtotal</b>
-                        <h4>{{product.subtotal}}</h4>
+                        <h4><b>{{product.subtotal}}</b></h4>
                     </div>
                 </div>
                 <div class="action">
@@ -59,14 +59,14 @@
 
         <div class="subtotal">
             <h3>Total</h3>
-            <h2>KSh {{cartservice.Total}}</h2>
+            <h2>{{cartservice.Total}}</h2>
         </div>
         <hr>
-        <button class="btn w-100 zoom-out">Login</button>
-        <div class="payment">
-            <a (click)="this.cartservice.createOrder()" class="btn btn-mpesa"><img class="mpesa zoom-out"
-                    src="../../../assets/mpesa.svg" alt="mpesa"></a>
-            <!-- <ngx-paypal [config]="payPalConfig"></ngx-paypal> -->
+        <button *ngIf="!logedin()" routerLink="/auth/login" class="btn w-100 zoom-out">Login</button>
+    
+        <div *ngIf="logedin()" class="payment">
+            <button routerLink="/cart/checkout" class="btn w-100 zoom-out">checkout</button>
+
         </div>
 
     </div>

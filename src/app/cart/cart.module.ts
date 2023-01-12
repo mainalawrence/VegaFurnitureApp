@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { HeaderModuleModule } from '../header-module/header-module.module';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { PaypalComponent } from './paypal/paypal.component';
+import { MpesaComponent } from './mpesa/mpesa.component';
 
 
 
@@ -13,6 +15,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
   declarations: [
     CartComponent,
     CheckoutComponent,
+    PaypalComponent,
+    MpesaComponent,
   ],
   imports: [
     RouterModule.forChild([{
