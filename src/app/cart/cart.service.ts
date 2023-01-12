@@ -43,8 +43,6 @@ export class CartService {
         if (product.quantity > 1) {
           product.quantity--;
           product.subtotal = parseFloat(product.cost.split("h")[1]) * parseInt(product.quantity)
-
-
         }
       }
     })
@@ -54,9 +52,10 @@ export class CartService {
     this.products.map(product => {
       if (id === product.uid) {
         product.quantity++;
-        product.subtotal = parseFloat(product.cost.split("h")[1]) * parseInt(product.quantity)
+        product.subtotal = parseFloat(product.cost.split("h")[1]) * parseInt(product.quantity) as Number
         let test = product.cost.split("h")[1].split().join();
         console.log(test);
+
       }
 
     })
