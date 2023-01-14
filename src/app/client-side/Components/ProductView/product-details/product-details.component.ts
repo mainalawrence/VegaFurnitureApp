@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CartService } from 'src/app/cart/cart.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProductStateService } from 'src/app/client-side/Services/product-state.service';
+import { Subject } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-details',
@@ -9,13 +12,16 @@ import { ProductStateService } from 'src/app/client-side/Services/product-state.
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+  staticAlertClosed = false;
+
   Product: any = { name: 'Chai' };
   id: any;
   images: string[] = [];
-  successMessage = false;
   ProductAmount: number = 1;
   mainImageURL: string = '';
 
+  @ViewChild('staticAlert', { static: false })
+  staticAlert!: NgbAlert;
   constructor(
     public cartServices: CartService,
     private router: ActivatedRoute,
@@ -53,10 +59,11 @@ export class ProductDetailsComponent implements OnInit {
       else return;
     })
 
+    setTimeout(() => this.staticAlert.close(), 20000);
 
   }
   public addToCart() {
-    this.successMessage = true;
+    this.staticAlertClosed = true;
     this.cartServices.addProductCart(this.Product)
   }
 

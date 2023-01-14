@@ -68,6 +68,22 @@ img{
     border-width: 0%;
 }
 
+
+.nav-item>i{
+ font-size: 200%;
+ font-weight: bolder;
+ padding: 10%;
+   
+}
+ .img-profile{
+font-size: 500%;
+ font-weight: bolder;
+
+ }
+.nav-item>i:hover{
+ color: white;
+   
+}
 .btn:hover {
     opacity: 80%;
     cursor: grab;
@@ -88,7 +104,11 @@ img{
 }
 
 
-
+  .btn-link-div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
 
 svg{
@@ -111,6 +131,11 @@ svg{
         .brand{
            font-weight: bold; 
         }
+      .icon-container{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
 
 }
 
@@ -167,3 +192,91 @@ svg{
 /* new data */
 
 
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.filter-container {
+    width: 10%;
+}
+
+/*tablet*/
+@media only screen and (min-width: 600px) and (max-width: 810px) {}
+
+
+@media (min-width: 992px) {
+   .userinfor.dropdown-menu {
+        display: none;
+        position: absolute;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    .navbar .link:hover .userinfor-menu {
+        display: block;
+        right:2px;
+        left: 85%;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.489);
+        transition-delay: .25s;
+    }
+    .userinfor-menudropdown {
+        color: white !important;
+        display: none;
+    } 
+    
+} 
+
+.dropdown-item-danger {
+    color: var(--bs-red);
+}
+
+.dropdown-item-danger:hover,
+.dropdown-item-danger:focus {
+    color: #fff;
+    background-color: var(--bs-red);
+}
+
+.dropdown-item-danger.active {
+    background-color: var(--bs-red);
+}
+.dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+
+.dropdown .dropdown-menu {
+    font-size: 0.85rem;
+}
+
+.dropdown .dropdown-menu .dropdown-header {
+    font-weight: 800;
+    font-size: 0.65rem;
+    color: #b7b9cc;
+}
+
+.dropdown.no-arrow .dropdown-toggle::after {
+    display: none;
+}
+.mx-1 {
+  margin-right: 0.25rem !important;
+}
+
+.text-uppercase,
+.dropdown .dropdown-menu .dropdown-header,
+.sidebar .sidebar-heading {
+    text-transform: uppercase !important;
+}
+   
+.alerts {
+    left: 0%;
+}

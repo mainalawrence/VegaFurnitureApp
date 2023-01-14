@@ -57,19 +57,25 @@ border-width: 0px;
    transform: scale(1.1);
 }
 
-
+.alert-div{
+   margin-top: -60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 /*phone*/
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 360px) {
    .ma-sm {
          margin-top: 10%;
       }
+    
 
    }
 
 
       /*tablet*/
-      @media only screen and (min-width: 460px) and (max-width: 810px) {
+      @media only screen and (min-width: 360px) and (max-width: 810px) {
          .ma-sm {
                margin-top:5%;
             }
