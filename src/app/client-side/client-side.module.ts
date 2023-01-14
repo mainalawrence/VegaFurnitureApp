@@ -9,12 +9,6 @@ import { ProductDetailsComponent } from './Components/ProductView/product-detail
 import { CategoryComponent } from './Components/category/category.component';
 import { CategoryListComponent } from './Components/category-list/category-list.component';
 import { HeaderModuleModule } from '../header-module/header-module.module';
-import { CartModule } from '../cart/cart.module';
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -24,21 +18,22 @@ import { CartModule } from '../cart/cart.module';
     ProductDetailsComponent,
     CategoryComponent,
     CategoryListComponent,
-    
-    
   ],
   imports: [
     CommonModule,
     NgbModule,
     RouterModule.forChild([
-      {path:'',children:[
-        {path:'',component:ProductListComponent},
-        {path:'category',component:CategoryListComponent},
-        {path:':id',component:ProductDetailsComponent}
-      ]}
+      {
+        path: '', children: [
+          { path: '', component: ProductListComponent },
+          { path: 'category', component: CategoryListComponent },
+          { path: ':id', component: ProductDetailsComponent },
+
+        ]
+      }
     ]),
     HeaderModuleModule,
   ],
-  bootstrap:[ProductFilterComponent]
+  bootstrap: [ProductFilterComponent]
 })
 export class ClientSideModule { }
