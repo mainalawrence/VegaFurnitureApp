@@ -15,6 +15,7 @@ import { CustomerServiceComponent } from './header-module/Footer/customer-servic
 import { PrivacyPolicyComponent } from './header-module/Footer/privacy-policy/privacy-policy.component';
 import { ContactUsComponent } from './header-module/Footer/contact-us/contact-us.component';
 import { RouterModule } from '@angular/router';
+import { HeaderModuleModule } from './header-module/header-module.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HeaderModuleModule
   ],
   providers: [
     {
@@ -44,6 +46,9 @@ import { RouterModule } from '@angular/router';
     }
   ],
   bootstrap: [AppComponent],
-  exports: []
+  exports: [
+    RouterModule
+  ],
+
 })
 export class AppModule { }

@@ -1,15 +1,16 @@
-<!-- <app-header></app-header>
- 
+<!-- <app-header></app-header> -->
 
-<app-footer></app-footer> -->
-<div class="d-flex w-100 justify-content-center align-items-center  gap-4 text-white ">
+<div class="d-flex w-100 justify-content-center align-items-center  gap-4  ">
     <div class="col-3 d-flex justify-content-center align-items-center ">
-      <ul class="navbar-item">
-          <li class=""></li>
-
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a routerLink="/users/messages" class="item"></a>Message</li>
+            <li class="nav-item"><a routerLink="/users/profile" class="item"></a>Profile</li>
+            <li class="nav-item"><a routerLink="/users/orders" class="item"></a>Orders</li>
+        </ul>
     </div>
     <div class="col-8 bg-success">
-        Dashboard
+    <router-outlet></router-outlet>
     </div>
 </div>
+
+<!-- <app-footer></app-footer> -->
