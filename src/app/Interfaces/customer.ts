@@ -1,6 +1,7 @@
 import { User } from "./user";
 
-export interface Customer extends User  {
-    phone:string
-    
+export interface Customer extends User {
+    phone: [],
+    Address: String,
+
 }
