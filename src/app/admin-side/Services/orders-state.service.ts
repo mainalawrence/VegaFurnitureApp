@@ -7,23 +7,25 @@ import { Router } from '@angular/router';
 })
 export class OrdersStateService {
 
-    constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
-  getOrder(){
+  getOrder() {
     return this.http.get<any>("http://localhost:4000/api/Orders");
   }
-   getTrushOrder(){
+  getTrushOrder() {
     return this.http.get<any>("http://localhost:4000/api/Orders");
   }
 
-   UpdateOrder(){
+  UpdateOrder() {
     return this.http.get<any>("http://localhost:4000/api/Orders");
-  } 
+  }
 
-  trushOrder(id:string){
-    return this.http.delete<any>("http://localhost:4000/api/Orders/"+id);
+  trushOrder(id: string) {
+    return this.http.delete<any>("http://localhost:4000/api/Orders/" + id);
   }
-  deleteOrder(id:string){
-    return this.http.delete<any>("http://localhost:4000/api/Orders/"+id);
+  
+  deleteOrder(id: string) {
+    return this.http.delete<any>("http://localhost:4000/api/Orders/" + id);
   }
+
 }
