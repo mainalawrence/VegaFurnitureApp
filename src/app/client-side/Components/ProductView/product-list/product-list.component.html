@@ -9,7 +9,6 @@
         </div>
  
 </div>
-
 <div *ngIf="collectionSize>pageSize" class="d-flex justify-content-between align-items-center p-2">
         <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
                 (pageChange)="refreshUsers()">

@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
@@ -7,19 +7,23 @@ import { CartService } from 'src/app/cart/cart.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() product:any={};
-  private hearts:number=0;
+
+  @Input() product: any = {};
+  private hearts: number = 0;
   images: String[] = [];
   url: string = '';
-  constructor(public cartService:CartService) { }
+
+  constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
-    this.url = "http://localhost:4000/Product/"+this.product.pictures[0]
+    this.url = "http://localhost:4000/Product/" + this.product.pictures[0]
   }
-  HandleHeart(){
-    
+
+  HandleHeart() {
+
   }
-  addToCart(){   
+
+  addToCart() {
     this.cartService.addProductCart(this.product);
   }
 

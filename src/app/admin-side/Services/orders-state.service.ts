@@ -12,6 +12,7 @@ export class OrdersStateService {
   getOrder() {
     return this.http.get<any>("http://localhost:4000/api/Orders");
   }
+
   getTrushOrder() {
     return this.http.get<any>("http://localhost:4000/api/Orders");
   }
@@ -23,7 +24,7 @@ export class OrdersStateService {
   trushOrder(id: string) {
     return this.http.delete<any>("http://localhost:4000/api/Orders/" + id);
   }
-  
+
   deleteOrder(id: string) {
     return this.http.delete<any>("http://localhost:4000/api/Orders/" + id);
   }
