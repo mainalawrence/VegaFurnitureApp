@@ -6,7 +6,6 @@
     position: relative;
     width: 20%;
     color: white;
-   
 }
 
 .svg-container{
@@ -15,20 +14,22 @@
     justify-content: center;
     margin-top: 5px;
     border-radius: 20px;
-    padding: 25%;
-
-    
+    padding: 25%;    
 }
+
 .svg-container:hover{
     background-color: white;
 }
+
 svg{
     color:white;
 }
+
 svg:hover{
     color:#32cf9d;
 
 }
+
 .c-card{
     margin: 1%;
     color:#1a1a1a;
@@ -37,22 +38,21 @@ svg:hover{
     border-style: solid;
     border-radius: 4px;
     background-color: rgba(140, 136, 136, 0.093);
- 
 }
 
 .c-card:hover{
     color: #ffffff;
     background-color: #32cf9d;
 }
+
 .body {
     padding: 1%;
-    background-color: #ffffff;
-    
+    background-color: #ffffff;  
 }
+
 .body:hover{
     background-color:rgb(174, 220, 205); 
 }
-
 
 .footer {
     padding: 1%;
