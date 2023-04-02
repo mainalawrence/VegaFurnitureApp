@@ -43,6 +43,7 @@ export class ProductDetailsComponent implements OnInit {
         return "http://localhost:4000/Product/" + image
       })
       this.mainImageURL = this.images[0];
+
     })
 
     this.Product = this.productService.Products.filter((product: any) => {
@@ -58,10 +59,9 @@ export class ProductDetailsComponent implements OnInit {
       }
       else return;
     })
-
     setTimeout(() => this.staticAlert.close(), 20000);
-
   }
+
   public addToCart() {
     this.staticAlertClosed = true;
     this.cartServices.addProductCart(this.Product)
@@ -74,6 +74,7 @@ export class ProductDetailsComponent implements OnInit {
       this.ProductAmount++;
     }
   }
+
   ReduceproductAMount() {
     console.log("Reduce Amount");
 

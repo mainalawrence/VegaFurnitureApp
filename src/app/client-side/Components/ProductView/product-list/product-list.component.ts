@@ -24,6 +24,7 @@ export class ProductListComponent implements OnInit {
     },
     )
   }
+  
   refreshUsers() {
     this.pagesProducts = this.Products.map((user: any, i: any) => ({ _id: i + 1, ...user })).slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
