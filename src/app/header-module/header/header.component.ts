@@ -31,24 +31,27 @@ export class HeaderComponent implements OnInit {
   menuOpen() {
     const offcanvasRef = this.offcanvasService.open(PhoneMenuComponent);
   }
+
   close() {
     const offcanvasRef = this.offcanvasService.dismiss(ProductFilterComponent);
   }
+
   logedin() {
     if (localStorage.getItem("vega") == null) {
       return false;
     }
     return true;
   }
+
   logout() {
     localStorage.removeItem('vega');
   }
+
   getName() {
-    let data = JSON.parse(""+ localStorage?.getItem("vega"))
-    if(data==null){
+    let data = JSON.parse("" + localStorage?.getItem("vega"))
+    if (data == null) {
       return "";
     }
-    
     return data.name;
   }
 

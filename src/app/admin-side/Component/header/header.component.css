@@ -24,7 +24,7 @@
     }
 
     .navbar .link:hover .nav-link {
-       
+  
 
     }
     .navbar .link:hover .dropdown-menu {
@@ -35,11 +35,12 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.489);
         transition-delay: .25s;
     }
+
     .menudropdown {
         color: white !important;
         display: none;
     } 
-        
+    
 } 
 
 .dropdown-item-danger {
