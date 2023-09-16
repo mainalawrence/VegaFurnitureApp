@@ -13,6 +13,12 @@ import { ArtComponent } from './Components/art/art.component';
 import { RouterModule } from '@angular/router';
 import { PhoneMenuComponent } from './Components/phone-menu/phone-menu.component';
 import { FooterComponent } from './Footer/footer/footer.component';
+import { OrderreturnComponent } from './Footer/orderreturn/orderreturn.component';
+import { ShippingdeliveryComponent } from './Footer/shippingdelivery/shippingdelivery.component';
+import { SecurepaymentComponent } from './Footer/securepayment/securepayment.component';
+import { SupportComponent } from './Footer/support/support.component';
+import { GuaranteeComponent } from './Footer/guarantee/guarantee.component';
+import { TermsconditionComponent } from './Footer/termscondition/termscondition.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,13 @@ import { FooterComponent } from './Footer/footer/footer.component';
     KitchenComponent,
     ArtComponent,
     PhoneMenuComponent,
-    FooterComponent
+    FooterComponent,
+    OrderreturnComponent,
+    ShippingdeliveryComponent,
+    SecurepaymentComponent,
+    SupportComponent,
+    GuaranteeComponent,
+    TermsconditionComponent
   ],
   imports: [
     NgbModule,
