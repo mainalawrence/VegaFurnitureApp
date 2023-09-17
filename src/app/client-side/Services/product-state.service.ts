@@ -10,7 +10,6 @@ export class ProductStateService {
   Products: any[] = [];
   constructor(private http: HttpClient, private router: Router) {
     this.getProducts().subscribe(res => {
-      console.log(res);
       this.Products = res;
     });
   }

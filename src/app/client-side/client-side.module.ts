@@ -9,6 +9,7 @@ import { ProductDetailsComponent } from './Components/ProductView/product-detail
 import { CategoryComponent } from './Components/category/category.component';
 import { CategoryListComponent } from './Components/category-list/category-list.component';
 import { HeaderModuleModule } from '../header-module/header-module.module';
+import { ProducttypeComponent } from './Components/producttype/producttype.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeaderModuleModule } from '../header-module/header-module.module';
     ProductDetailsComponent,
     CategoryComponent,
     CategoryListComponent,
+    ProducttypeComponent,
   ],
   imports: [
     CommonModule,
@@ -26,8 +28,12 @@ import { HeaderModuleModule } from '../header-module/header-module.module';
       {
         path: '', children: [
           { path: '', component: ProductListComponent },
-          { path: 'category', component: CategoryListComponent },
           { path: ':id', component: ProductDetailsComponent },
+          {
+            path: ':category', children: [
+              { path: ':type', component: ProducttypeComponent }
+            ]
+          },
 
         ]
       }
