@@ -30,7 +30,7 @@
                     <ul class="navbar-nav">
                         <!-- BEDROOM -->
                         <div class="link ">
-                            <a class="nav-link text-white   dropdown-toggle" href="#"
+                            <a class="nav-link text-white   dropdown-toggle" routerLink="/products/bedroom/all"
                                 data-bs-toggle="dropdown">BEDROOM</a>
                             <div class="dropdown-menu " style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark bg p-4  justify-content-center">
@@ -41,7 +41,7 @@
 
                         <!-- FURNITURE -->
                         <div class="link ">
-                            <a class="nav-link text-white  dropdown-toggle" href="#"
+                            <a class="nav-link text-white  dropdown-toggle" routerLink="/products/furniture/all"
                                 data-bs-toggle="dropdown">FURNITURE</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg p-4 bg-dark justify-content-center">
@@ -51,7 +51,7 @@
                         </div>
                         <!-- LIGHTING -->
                         <div class="link ">
-                            <a class="nav-link  text-white dropdown-toggle" href="#"
+                            <a class="nav-link  text-white dropdown-toggle" routerLink="/products/lighting/all"
                                 data-bs-toggle="dropdown">LIGHTING</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4 justify-content-center">
@@ -61,7 +61,7 @@
                         </div>
                         <!-- OUTDOOR -->
                         <div class="link">
-                            <a class="nav-link text-white dropdown-toggle" href="#"
+                            <a class="nav-link text-white dropdown-toggle" routerLink="/products/outdoor/all"
                                 data-bs-toggle="dropdown">OUTDOOR</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4 justify-content-center">
@@ -72,7 +72,7 @@
 
                         <!-- DINNING -->
                         <div class="link ">
-                            <a class="nav-link text-white  dropdown-toggle" href="#"
+                            <a class="nav-link text-white  dropdown-toggle" routerLink="/products/dinning/all"
                                 data-bs-toggle="dropdown">DINNING</a>
                             <div class="dropdown-menu" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4 justify-content-center">
@@ -82,7 +82,7 @@
                         </div>
                         <!--KITCHEN  -->
                         <div class="link">
-                            <a class="nav-link text-white  dropdown-toggle" href="#"
+                            <a class="nav-link text-white  dropdown-toggle" routerLink="/products/kitchen/all"
                                 data-bs-toggle="dropdown">KITCHEN</a>
                             <div class="dropdown-menu " style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4 justify-content-center">
@@ -93,7 +93,8 @@
 
                         <!-- ART -->
                         <div class="link">
-                            <a class="nav-link text-white  dropdown-toggle" href="#" data-bs-toggle="dropdown">ART</a>
+                            <a class="nav-link text-white  dropdown-toggle" routerLink="/products/art/all"
+                                data-bs-toggle="dropdown">ART</a>
                             <div class="dropdown-menu art" style="width: 100%;">
                                 <div class="d-flex flex-col bg-dark p-4  justify-content-center ">
                                     <app-art></app-art>
@@ -128,7 +129,7 @@
                             <!-- Nav Item - User Information -->
                             <li *ngIf="logedin()"
                                 class="nav-item userinfor d-flex justify-content-center link align-items-center w-100">
-                                <a class="nav-link  dropdown-toggle" routerLink="/users" data-bs-toggle="dropdown"
+                                <a class="nav-link  dropdown-toggle" routerLink="/profile" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     <span class="mr-2 d-lg-inline text-black">{{getName()}}</span>
                                     <img class="img-profile rounded-circle w-45"
@@ -136,15 +137,15 @@
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class=" .userinfor-menudropdown dropdown-menu userinfor-menu">
-                                    <a class="dropdown-item" routerLink="/users/message">
+                                    <a class="dropdown-item" routerLink="/profile/messages">
                                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Message
                                     </a>
-                                    <a class="dropdown-item" routerLink="/users/profile">
+                                    <a class="dropdown-item" routerLink="/profile/user">
                                         <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Profile
                                     </a>
-                                    <a class="dropdown-item" routerLink="/users/orders">
+                                    <a class="dropdown-item" routerLink="/profile/orders">
                                         <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Activity Orders
                                     </a>

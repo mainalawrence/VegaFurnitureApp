@@ -13,11 +13,7 @@ import { GuaranteeComponent } from './header-module/Footer/guarantee/guarantee.c
 import { SupportComponent } from './header-module/Footer/support/support.component';
 
 const routes: Routes = [
-  {
-    path: 'products',
-    loadChildren: () => import('./client-side/client-side.module').then(mod => mod.ClientSideModule),
 
-  },
   {
     path: 'about',
     component: AboutUsComponent
@@ -58,18 +54,24 @@ const routes: Routes = [
     path: 'termcondition',
     component: TermsconditionComponent
   },
-
+  {
+    path: 'profile',
+    loadChildren: () => import('./users/users.module').then(users => users.UsersModule)
+  },
   { path: 'admin', loadChildren: () => import('./admin-side/admin-side.module').then(mod => mod.AdminSideModule) },
   { path: 'auth', loadChildren: () => import('./authentication/authentication.module').then(mod => mod.AuthenticationModule) },
+
+  {
+    path: 'products',
+    loadChildren: () => import('./client-side/client-side.module').then(mod => mod.ClientSideModule),
+
+  },
   { path: '', redirectTo: '/products', pathMatch: 'full' },
   {
     path: 'cart',
     loadChildren: () => import('./cart/cart.module').then(mod => mod.CartModule)
   },
-  {
-    path: 'users',
-    loadChildren: () => import('./users/users.module').then(users => users.UsersModule)
-  },
+
   { path: '**', component: ErrorComponent }
 
 ];
