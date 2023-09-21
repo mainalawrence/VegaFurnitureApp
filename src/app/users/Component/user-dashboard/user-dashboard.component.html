@@ -1,12 +1,28 @@
 <app-header></app-header>
-<div class="d-flex w-100 justify-content-center align-items-center  gap-4  ">
-    <div class="col-1 d-flex justify-content-center align-items-center bg-success">
-        <ul class="navbar-nav text-black col-12">
-            <li class="nav-item  mt-3"><a routerLink="/profile/messages" class="item">Message</a></li>
-            <li class="nav-item"><a routerLink="/profile/user" class="item">Profile</a></li>
-            <li class="nav-item"><a routerLink="/profile/orders" class="item">Orders</a></li>
-        </ul>
-    </div>
+<div class="d-flex w-100 justify-content-center align-items-center  gap-2 mt-1 ">
+    <div class=" col-3 w-100 .bg-light">
+        <div class="d-c-flex w-100">
+            <div class="m-card w-100 py-2 " routerLink="/profile/user">
+                My Vega Account
+            </div>
+            <div class="m-card col-12 py-1 my-2" routerLink="/profile/orders">
+                Orders
+            </div>
+            <div class="m-card col-12 py-1 my-2" routerLink="/profile/messages">
+                Inbox
+            </div>
+            <div class="m-card col-12 py-1 my-2" routerLink="/profile/messages">
+                Pending Review
+            </div>
+            <div class="m-card col-12 py-1 my-2" routerLink="/profile/messages">
+                Saved Items
+            </div>
+            <div class="m-card col-12 py-1 my-2" routerLink="/profile/user">
+                Profile
+            </div>
+
+        </div>
+    </div>`
     <div class="col-8 ">
         <router-outlet></router-outlet>
     </div>

@@ -1,8 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbActiveOffcanvas, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { ProductFilterComponent } from '../../client-side/Components/product-filter/product-filter.component';
 import { PhoneMenuComponent } from '../Components/phone-menu/phone-menu.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,7 @@ export class HeaderComponent implements OnInit {
   public navbarCollapse = true;
 
   public searchBarOpen!: boolean;
+
 
   constructor(private offcanvasService: NgbOffcanvas, public router: Router) { }
 
@@ -56,5 +58,5 @@ export class HeaderComponent implements OnInit {
   }
 
 
-
 }
+export class NgbdDropdownBasic { }

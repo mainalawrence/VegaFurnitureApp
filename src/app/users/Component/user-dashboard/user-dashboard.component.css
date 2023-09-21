@@ -1,0 +1,11 @@
+.m-card{
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+.m-card:hover {
+  color:  #32cf9d;
+}
+.container{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

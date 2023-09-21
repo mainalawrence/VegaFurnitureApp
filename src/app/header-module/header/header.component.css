@@ -8,7 +8,16 @@
     margin-bottom: 1%;
     flex-direction: row;
 }
-
+.account-btn{
+    background-color:#32cf9d;
+    border-width: 0px;
+    outline: 0px;
+    color: white;
+    font-size: large;
+}
+.account-btn:hover{
+   color:black;
+}
 .left {
     display: flex;
     align-items: center;

@@ -20,6 +20,7 @@ import { SupportComponent } from './Footer/support/support.component';
 import { GuaranteeComponent } from './Footer/guarantee/guarantee.component';
 import { TermsconditionComponent } from './Footer/termscondition/termscondition.component';
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
