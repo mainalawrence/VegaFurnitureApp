@@ -7,5 +7,16 @@
   color:  #32cf9d;
 }
 .container{
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.092);
+}
+.c-m-btn{
+border-width: 0px;
+outline: 0px;
+background-color: white;
+border-radius: 10px;
+}
+.c-m-btn:hover{
+background-color:rgba(128, 128, 128, 0.385);
+opacity: 10;
+color: white;
 }

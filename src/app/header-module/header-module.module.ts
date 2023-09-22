@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BedRoomComponent } from './Components/bed-room/bed-room.component';
 import { FurnitureComponent } from './Components/furniture/furniture.component';
@@ -45,9 +45,9 @@ import { TermsconditionComponent } from './Footer/termscondition/termscondition.
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
-  bootstrap:[HeaderComponent,FooterComponent],
-  exports:[HeaderComponent,FooterComponent]
+  bootstrap: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent]
 })
 export class HeaderModuleModule { } 

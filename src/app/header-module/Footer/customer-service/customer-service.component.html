@@ -1,16 +1,54 @@
 <app-header></app-header>
-<div class="container">
-    <h1>Customer Service</h1>
-
-    <p>Our customer service team is here to assist you with any questions or issues you may have. We are committed to
-        providing excellent service to our customers.</p>
-
-    <h2>Contact Information</h2>
-    <p>If you need assistance, please don't hesitate to contact us:</p>
-
-    <ul>
-        <li>Email: customerservice@example.com</li>
-        <li>Phone: +1234567890</li>
-    </ul>
+<div class="container mt-5">
+  <h1>Customer Services</h1>
+  <p>At Furniture World, we are committed to providing excellent customer service. If you have any questions or concerns, please don't hesitate to contact our customer support team. We are here to assist you!</p>
 </div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Contact Information</h2>
+      <address>
+        <strong>Furniture World</strong><br>
+        123 Furniture Street<br>
+        Nairobi, Kenya<br>
+        Phone: +254 123 456 789<br>
+        Email: support@furnitureworld.com<br>
+      </address>
+    </div>
+    <div class="col-md-6">
+      <h2>Customer Support Hours</h2>
+      <p>Our customer support team is available during the following hours:</p>
+      <ul>
+        <li>Monday-Friday: 9:00 AM - 6:00 PM</li>
+        <li>Saturday: 10:00 AM - 4:00 PM</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h2>Frequently Asked Questions (FAQ)</h2>
+  <div class="accordion" id="faqAccordion">
+    <!-- Example FAQ item -->
+    <div class="card">
+      <div class="card-header" id="faqHeading1">
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+            How can I track my order?
+          </button>
+        </h5>
+      </div>
+      <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+        <div class="card-body">
+          You can track your order by logging into your account and accessing the order history section. There, you'll find detailed information about the status and tracking details of your order.
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more FAQ items here as needed -->
+  </div>
+</div>
+
 <app-footer></app-footer>

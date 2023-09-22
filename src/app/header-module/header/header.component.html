@@ -117,49 +117,51 @@
                     id="navbarSupportedContent">
 
                     <div class="d-flex gap-3">
-
                         <div class="row">
-                            <div class="col">
-                                <div ngbDropdown class="d-inline-block ">
-                                    <button *ngIf="!logedin()" type="button" class=" account-btn py-4 "
+                            <div class="col gap-2 c-font">
+                                <div ngbDropdown class="d-inline-block display-6">
+                                    <button *ngIf="!logedin()" type="button" class=" account-btn py-4 btn-large "
                                         id="dropdownBasic1" ngbDropdownToggle>
-                                        signin
+                                        <b class="c-font"> Signin</b>
                                     </button>
-                                    <button *ngIf="logedin()" type="button" class=" account-btn py-4"
+                                    <button *ngIf="logedin()" type="button" class=" account-btn py-4 btn-large"
                                         id="dropdownBasic1" ngbDropdownToggle> <i class="bi bi-person-check"></i>
-                                        Hi,{{getName()}}
+                                        <b class="c-font">Hi,{{getName()}}</b>
                                     </button>
-                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                        <button ngbPopover="signin/signup" class="btn btn-primary" *ngIf="!logedin()"
-                                            routerLink="/auth/login" ngbDropdownItem>
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1 display-6">
+                                        <button ngbPopover="signin/signup" class="btn btn-primary btn-lg"
+                                            *ngIf="!logedin()" routerLink="/auth/login" ngbDropdownItem>
                                             signup</button>
 
                                         <button *ngIf="logedin()" routerLink="/profile/user" ngbDropdownItem> <i
-                                                class="bi bi-person"></i>
-                                            My Account</button>
+                                                class="bi bi-person btn-lg"></i>
+                                            <b class="c-font">My Account</b></button>
                                         <button *ngIf="!logedin()" routerLink="/auth/login" ngbDropdownItem> <i
-                                                class="bi bi-person"></i>
+                                                class="bi bi-person btn-lg"></i>
                                             My Account</button>
                                         <button *ngIf="logedin()" routerLink="/profile/messages" ngbDropdownItem> <i
-                                                class="bi bi-envelope"></i>Message</button>
+                                                class="bi bi-envelope btn-lg"></i><b class="c-font">Message</b></button>
 
                                         <button *ngIf="logedin()" routerLink="/profile/orders" ngbDropdownItem><i
-                                                class="bi bi-box2"></i>
-                                            Orders</button>
+                                                class="bi bi-box2 btn-lg"></i>
+                                            <b class="c-font">Orders</b></button>
                                         <button *ngIf="!logedin()" routerLink="/auth/login" ngbDropdownItem><i
-                                                class="bi bi-box2"></i>
-                                            Orders</button>
+                                                class="bi bi-box2 btn-lg"></i>
+                                            <b class="c-font">Orders</b></button>
                                         <button routerLink="/profile/user" ngbDropdownItem><i
-                                                class="bi bi-heart"></i>Loved</button>
+                                                class="bi bi-heart btn-lg"></i><b class="c-font">Loved</b></button>
+                                        <hr>
 
-
-                                        <button *ngIf="logedin()" (click)="logout()" ngbDropdownItem> Logout</button>
+                                        <div class="px-3">
+                                            <button class="btn " *ngIf="logedin()" (click)="logout()" ngbDropdownItem>
+                                                Logout</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <button ngbPopover="Cart" triggers="mouseenter:mouseleave" routerLink="/cart"
-                            class="bi bi-cart p-1 account-btn"> Cart</button>
+                            class="bi bi-cart p-1 account-btn"> <b class="c-font">Cart</b></button>
 
                     </div>
                 </div>
